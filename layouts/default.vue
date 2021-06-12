@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-screen-md mx-auto">
+  <main class="max-w-screen-xl mx-auto">
     <Nuxt />
   </main>
 </template>

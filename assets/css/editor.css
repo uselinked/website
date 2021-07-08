@@ -193,11 +193,11 @@ ul[data-type='taskList'] li > input {
 }
 .floating-menu button:hover,
 .floating-menu button.is-active {
-  @apply text-gray-700 dark:text-gray-400;
+  @apply text-gray-400 dark:text-gray-700;
 }
 
 .bubble-menu {
-  @apply flex bg-white dark:bg-black;
+  @apply flex dark:bg-white bg-black border-gray-600;
   padding: 0.3rem;
   margin-bottom: 0.3rem;
   border-radius: 0.5rem;
@@ -216,5 +216,5 @@ ul[data-type='taskList'] li > input {
 
 .bubble-menu button:hover,
 .bubble-menu button.is-active {
-  @apply text-gray-700 dark:text-gray-400;
+  @apply text-gray-400 dark:text-gray-700;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col bg-black text-white dark:bg-white rounded-lg">
+  <div class="flex flex-col bg-black text-white dark:bg-white rounded-lg shadow-2xl">
     <div class="text-white w-full h-full">
       <main
         class="flex flex-col flex-grow items-stretch h-full"

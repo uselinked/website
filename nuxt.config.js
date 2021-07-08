@@ -36,22 +36,27 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['nuxt-svg-loader', 'nuxt-i18n'],
+  modules: ['nuxt-svg-loader', ['nuxt-i18n',
+    {
+      locales: [
+        {
+          code: 'en',
+          file: 'en-US.js'
+        },
+        {
+          code: 'de',
+          file: 'de-DE.js'
+        },
+      ],
+      lazy: true,
+      langDir: 'lang/',
+      defaultLocale: 'en',
+      detectBrowserLanguage: {
+        useCookie: true
+      }
+    }
+  ]],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  i18n: {
-    locales: ['en', 'de'],
-    defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-        en: {
-          home: {
-            calendarWeek: 'Week'
-          }
-        }
-      }
-    }
-  }
 }

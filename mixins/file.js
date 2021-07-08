@@ -7,10 +7,14 @@ export default {
   },
   methods: {
     saveFile() {
-      console.log(this.formatDate('y'), this.today, this.content, this.rating)
+      if (process.browser) {
+        localStorage.setItem(this.today, this.content)
+      }
     },
     loadFile() {
-      console.log([this.formatDate('y'), this.today])
+      if (process.browser) {
+        this.content = localStorage.getItem(this.today)
+      }
     },
     debounce(func, wait) {
       let timeout

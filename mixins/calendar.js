@@ -39,7 +39,7 @@ export default {
         for (let i = 0; i <= 6; i++) {
           let day = startOfWeek
             .plus({ days: i })
-            .setLocale(localStorage.lang ?? 'en-US')
+            .setLocale(this.$i18n.locale)
           week.push({
             isoDate: day.toISODate(),
             day: day.toFormat('d'),
@@ -57,7 +57,7 @@ export default {
     formatDate(format) {
       if (process.browser) {
         return DateTime.fromISO(this.today)
-          .setLocale(localStorage.lang ?? 'en-US')
+          .setLocale(this.$i18n.locale)
           .toFormat(format)
       }
     }

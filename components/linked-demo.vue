@@ -134,12 +134,28 @@ export default {
   data() {
     return {
       keysPressed: {},
-      editor: null
+      editor: null,
+      timer: null
     }
   },
   methods: {
     focusEditor() {
       this.editor.chain().focus().run()
+    },
+    animateText(){
+      if (this.editor.getHTML() == '<p></p>') {
+        this.stoper()
+        let i = -1
+        this.timer = setInterval(()=>{
+          i++
+          const x = i%this.$t('editor.demoContent').length
+          this.content += this.$t('editor.demoContent')[x]
+        }, 100-(Math.random()*20))
+      }
+    },
+    stoper(){
+      clearInterval(this.timer)
+      this.content = ''
     }
   },
   mounted() {
@@ -171,6 +187,7 @@ export default {
       }
     })
 
+    //this.animateText()
     if (this.editor.getHTML() == '<p></p>') {
       this.content = this.$t('editor.demoContent')
     }

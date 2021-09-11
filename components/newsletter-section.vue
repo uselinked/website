@@ -11,9 +11,9 @@
             </p>
           </div>
           <div class="mt-8 lg:mt-0 lg:ml-8">
-            <form class="sm:flex">
-              <label for="email-address" class="sr-only">{{ $t('newsletter.email') }}</label>
-              <input id="email-address" name="email-address" type="email" autocomplete="email" required class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs rounded-md" :placeholder="$t('newsletter.email')">
+            <form class="sm:flex" @submit.prevent='subscribe'>
+              <label for="email" class="sr-only">{{ $t('newsletter.email') }}</label>
+              <input id="email" name="email" type="email" v-model='email' autocomplete="email" required class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs rounded-md" :placeholder="$t('newsletter.email')">
               <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button type="submit" class="w-full flex items-center justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                   {{ $t('newsletter.notify') }}
@@ -32,3 +32,49 @@
       </div>
     </section>
 </template>
+
+<script>
+
+import axios from 'axios'
+
+export default {
+  data () {
+    return {
+      email: null,
+      error: null,
+      success: false,
+      loading: false
+    }
+  },
+
+  methods: {
+    subscribe() {
+      if (this.loading || !this.email) {
+        return
+      }
+
+      this.loading = true
+
+      const options = {
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      }
+
+      axios.post(
+        'https://news.lost.services/mailcoach/subscribe/0455ff01-00ed-4694-a516-be3be919f23e',
+        { email: this.email },
+        options
+      ).then(()=>{
+        this.email = null
+        this.success = true
+        this.error = null
+        this.loading = false
+      }).catch(error => {
+        this.success = false
+        this.error = error?.reponse?.data?.errors?.email?.[0] || error?.response?.data?.message
+      })
+    }
+  }
+}
+</script>

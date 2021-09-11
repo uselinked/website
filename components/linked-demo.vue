@@ -1,39 +1,128 @@
 <template>
-  <div class="flex flex-col bg-black text-white dark:bg-white rounded-lg shadow-2xl" style="min-height: 700px;">
+  <div
+    class="
+      flex flex-col
+      bg-black
+      text-white
+      dark:bg-white
+      rounded-lg
+      shadow-2xl
+    "
+    style="min-height: 700px"
+  >
     <div class="text-white w-full h-full">
-      <main
-        class="flex flex-col flex-grow items-stretch h-full"
-      >
+      <main class="flex flex-col flex-grow items-stretch h-full">
         <!-- Header Start -->
         <header
-          class="dark:text-black dark:bg-white bg-black text-white z-50 select-none rounded-lg">
-          <div class="flex justify-between items-center align-center pt-6 px-10 mb-2">
-            <span class="text-center text-4xl font-black">{{
+          class="
+            dark:text-black
+            dark:bg-white
+            bg-black
+            text-white
+            z-50
+            select-none
+            rounded-lg
+          "
+        >
+          <div
+            class="
+              flex
+              justify-between
+              items-center
+              align-center
+              pt-6
+              px-10
+              mb-2
+            "
+          >
+            <span class="text-center text-2xl font-black">{{
               this.formatDate('MMMM yyyy')
             }}</span>
             <!-- Week switcher -->
-            <span class="dark:text-black text-white select-none flex justify-center items-center align-center space-x-1">
-              <span class="text-red-800 hover:text-red-400 cursor-pointer" @click="shiftDay(-7)">
+            <span
+              class="
+                dark:text-black
+                text-white
+                select-none
+                flex
+                justify-center
+                items-center
+                align-center
+                space-x-1
+              "
+            >
+              <span
+                class="text-red-800 hover:text-red-400 cursor-pointer"
+                @click="shiftDay(-7)"
+              >
                 <ArrowLeftIcon />
               </span>
               <span>
-                <span class="mr-1 dark:text-gray-400 text-gray-700">{{ $t('editor.week') }}</span>
+                <span class="mr-1 dark:text-gray-400 text-gray-700">{{
+                  $t('editor.week')
+                }}</span>
                 {{ this.formatDate('WW') }}
               </span>
-              <span class="text-red-800 hover:text-red-400 cursor-pointer" @click="shiftDay(7)">
+              <span
+                class="text-red-800 hover:text-red-400 cursor-pointer"
+                @click="shiftDay(7)"
+              >
                 <ArrowRightIcon />
               </span>
             </span>
           </div>
           <!-- Day switcher -->
-          <div class="flex dark:bg-white bg-black justify-center space-x-4 z-50 border-b dark:border-gray-400 border-gray-800 py-4">
+          <div
+            class="
+              flex
+              dark:bg-white
+              bg-black
+              justify-center
+              space-x-4
+              z-50
+              border-b
+              dark:border-gray-400
+              border-gray-800
+              py-4
+            "
+          >
             <template v-for="date in getCurrentWeekDates()">
-              <div :key="date.day" class="flex-col justify-center items-center self-center text-center">
-                <span class="block mb-1 text-xs dark:text-gray-400 text-gray-700" :class="{'dark:text-red-400 text-red-500': date.isoDate === today}">
+              <div
+                :key="date.day"
+                class="
+                  flex-col
+                  justify-center
+                  items-center
+                  self-center
+                  text-center
+                "
+              >
+                <span
+                  class="block mb-1 text-xs dark:text-gray-400 text-gray-700"
+                  :class="{
+                    'dark:text-red-400 text-red-500': date.isoDate === today
+                  }"
+                >
                   {{ date.weekDay }}
                 </span>
                 <span
-                  class="flex justify-center items-center self-center text-center w-10 h-10 rounded-full font-black text-xs dark:hover:bg-gray-200 hover:bg-gray-800 cursor-pointer dark:ring-red-600 ring-red-900"
+                  class="
+                    flex
+                    justify-center
+                    items-center
+                    self-center
+                    text-center
+                    w-10
+                    h-10
+                    rounded-full
+                    font-black
+                    text-xs
+                    dark:hover:bg-gray-200
+                    hover:bg-gray-800
+                    cursor-pointer
+                    dark:ring-red-600
+                    ring-red-900
+                  "
                   :class="{ 'ring-4 text-sm': date.isoDate === today }"
                   :key="date.day"
                   @click="setDay(date.isoDate)"
@@ -46,7 +135,19 @@
         </header>
         <!-- Header End -->
         <div v-if="editor">
-          <div class="px-10 mt-5 mb-5 dark:text-gray-400 text-gray-500 relative overflow-scroll" style="max-height: 500px; height:500px;" @click="focusEditor">
+          <div
+            class="
+              px-10
+              mt-5
+              mb-5
+              dark:text-gray-400
+              text-gray-500
+              relative
+              overflow-scroll
+            "
+            style="max-height: 500px; height: 500px"
+            @click="focusEditor"
+          >
             <bubble-menu class="bubble-menu" :editor="editor" v-if="editor">
               <button @click="editor.chain().focus().toggleHighlight().run()">
                 <PenIcon />
@@ -142,18 +243,18 @@ export default {
     focusEditor() {
       this.editor.chain().focus().run()
     },
-    animateText(){
+    animateText() {
       if (this.editor.getHTML() == '<p></p>') {
         this.stoper()
         let i = -1
-        this.timer = setInterval(()=>{
+        this.timer = setInterval(() => {
           i++
-          const x = i%this.$t('editor.demoContent').length
+          const x = i % this.$t('editor.demoContent').length
           this.content += this.$t('editor.demoContent')[x]
-        }, 100-(Math.random()*20))
+        }, 100 - Math.random() * 20)
       }
     },
-    stoper(){
+    stoper() {
       clearInterval(this.timer)
       this.content = ''
     }

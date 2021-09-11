@@ -3,7 +3,7 @@ export default {
   privacyPolicy: 'Datenschutz Erklärung',
   cta: {
     title: 'Verknüpfe Gedanken mit Tagen.',
-    subtitle: 'Entlaste deinen Kopf in dem du jeden Tag Notizen machst.',
+    subtitle: 'Entlaste deinen Kopf indem du jeden Tag Notizen machst.',
     button: 'Lade die App kostenlos herunter',
     demoNotice: 'Das ist eine interaktive Demo, probier Sie aus 👆'
   },
@@ -37,8 +37,9 @@ export default {
     `
   },
   newsletter: {
-    title: 'Bleib auf dem laufenden!',
-    description: 'Du erhälst E-Mails zu neuen Versionen von linked, Tipps und Tricks sowie hin und wieder mal Allgemeine Neuigkeiten. Wir senden dir niemals Spam und werden deine Inbox nicht zu müllen, versprochen.',
+    title: 'Bleib auf dem Laufenden!',
+    description:
+      'Erhalte als erstes Neuigkeiten zu linked, Updates und alles andere maximal einmal im Monat.',
     email: 'Gib deine@email.de ein',
     notify: 'Benachrichtige',
     privacy: 'Wir nehmen Datenschutz ernst. Lies unsere {privacyPolicy}'

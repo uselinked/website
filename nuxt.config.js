@@ -39,28 +39,47 @@ export default {
     '@nuxtjs/tailwindcss'
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['nuxt-svg-loader', ['nuxt-i18n',
+  // Router config
+  router: {
+    middleware: ['fathom']
+  },
+
+  // Script tags
+  script: [
+    // Fathom Analytics
     {
-      locales: [
-        {
-          code: 'en',
-          file: 'en-US.js'
-        },
-        {
-          code: 'de',
-          file: 'de-DE.js'
-        },
-      ],
-      lazy: true,
-      langDir: 'lang/',
-      defaultLocale: 'en',
-      detectBrowserLanguage: {
-        useCookie: true
-      }
+      src: 'https://cdn.usefathom.com/script.js',
+      'data-site': 'CGHPCEJF',
+      defer: true
     }
-  ]],
+  ],
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    'nuxt-svg-loader',
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            code: 'en',
+            file: 'en-US.js'
+          },
+          {
+            code: 'de',
+            file: 'de-DE.js'
+          }
+        ],
+        lazy: true,
+        langDir: 'lang/',
+        defaultLocale: 'en',
+        detectBrowserLanguage: {
+          useCookie: true
+        }
+      }
+    ]
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {}
 }

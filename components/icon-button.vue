@@ -1,6 +1,7 @@
 <template>
   <a
     :href="href"
+    @click="trackDownloadClick"
     class="
       mt-8
       inline-flex
@@ -26,6 +27,11 @@
 
 <script>
 export default {
-  props: ['href']
+  props: ['href'],
+  methods: {
+    trackDownloadClick() {
+      window.fathom.trackGoal('YBMRKIDP', 0)
+    }
+  }
 }
 </script>

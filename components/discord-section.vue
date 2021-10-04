@@ -17,8 +17,9 @@
             <div
               class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0"
             >
-              <button
-                type="submit"
+              <a
+                href="https://discord.gg/uNjJzZvccr"
+                target="_blank"
                 class="
                   w-full
                   flex
@@ -38,7 +39,7 @@
                 "
               >
                 {{ $t('discord.join') }}
-              </button>
+              </a>
             </div>
           </form>
         </div>

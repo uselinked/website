@@ -2,10 +2,12 @@
   <div>
     <!--<section class="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-8 relative z-30 mt-32 mb-32"></section>-->
     <hero-section />
+    <feature-section />
     <download-section />
     <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-8 relative z-20">
       <hr class="border-t border-gray-200" />
     </div>
+    <discord-section />
     <!--<newsletter-section />-->
     <section
       class="

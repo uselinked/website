@@ -9,8 +9,8 @@
       md:px-8
       relative
       z-30
-      pt-24
-      pb-24
+      pt-8
+      pb-12
     "
   >
     <div class="">
@@ -33,10 +33,10 @@
         </span>
         <div class="lg:grid lg:grid-cols-2 lg:gap-8" id="download">
           <h2
-            class="text-3xl font-extrabold text-red-900 lg:max-w-xl text-left"
+            class="text-3xl font-extrabold text-gray-900 lg:max-w-xl text-left"
           >
             <p>{{ $t('download.title') }}</p>
-            <p>{{ $t('download.subTitle') }}</p>
+            <p>{{ $t('download.subTitle') }} 👉</p>
           </h2>
           <div class="flow-root self-center mt-8 lg:mt-0">
             <div class="-mt-4 -ml-8 flex flex-wrap justify-between lg:-ml-4">

@@ -3,7 +3,8 @@ export default {
   privacyPolicy: 'Privacy Policy',
   cta: {
     title: 'Link your thoughts to days.',
-    subtitle: 'Unclutter your mind by writing everything down, each and every day.',
+    subtitle:
+      'Unclutter your mind by writing everything down, each and every day.',
     button: 'Download the app for free',
     demoNotice: 'This is an interactive demo, try it 👆'
   },
@@ -38,9 +39,82 @@ export default {
   },
   newsletter: {
     title: 'Stay up to date!',
-    description: 'We will send you E-mails about new versions of linked, tips and tricks as well as occasional generic update E-mails. We will never spam you and not clutter your inbox, promised.',
+    description:
+      'We will send you E-mails about new versions of linked, tips and tricks as well as occasional generic update E-mails. We will never spam you and not clutter your inbox, promised.',
     email: 'you@mail.com',
     notify: 'Notify me',
-    privacy: 'We care about the protection of your data. Read our {privacyPolicy}'
+    privacy:
+      'We care about the protection of your data. Read our {privacyPolicy}'
+  },
+  discord: {
+    title: 'Stay up to date!',
+    description:
+      'Join the community on discord to get the latest news around linked before anyone else, give feedback about the app and much more.',
+    join: 'Become a member 👋'
+  },
+  feature: {
+    title: 'Note taking, but on steroids.',
+    subtitle:
+      'Leave sticky notes behind and start writing things down per day, as much as you want. linked can be your calendar with a twist, a diary or a place to dump your thoughts into. ',
+    editor: {
+      title: 'The editor you need',
+      description:
+        'Want to give your text emphasis? Make it bold, write it in italics, create headings, add lists or todos and much more.'
+    },
+    theme: {
+      title: 'Dark or light side?',
+      description:
+        'Choose wether you want your linked in dark or light mode. Switch the theme at the top to preview it.'
+    },
+    keyboard: {
+      title: 'Keyboard shortcuts',
+      description:
+        'Quickly need to navigate? Use your keyboard to jump days or weeks and get back to today anytime.'
+    },
+    offline: {
+      title: 'Offline first',
+      description:
+        'No need for an internet connection (other than updates) - your data is stored locally.'
+    },
+    language: {
+      title: 'We speak all languages',
+      description:
+        'Well not just yet, but linked has been translated in 11 languages so far.'
+    },
+    design: {
+      title: 'Minimal design',
+      description:
+        "linked's minimal design helps you focus on the important stuff, find everything just where you need it."
+    },
+    search: {
+      title: 'Search it all',
+      description:
+        '🚧: Use the full text search to find what was once written down, lightning fast.'
+    },
+    link: {
+      title: 'Links between days',
+      description:
+        '🚧: Want to reference a day in the future or past? Quickly jump between connected days.'
+    },
+    sync: {
+      title: 'Sync between the world',
+      description:
+        '🚧: Sync between all of your devices to always have your notes with you.'
+    },
+    teams: {
+      title: 'You and your friends',
+      description:
+        '🚧: Work together. Live. Collaborate on notes together with your team, friends or your dog.'
+    },
+    devices: {
+      title: 'Desktop, Mobile and web',
+      description:
+        '🚧: Use linked on any device you own - maybe even your fridge who knows.'
+    },
+    more: {
+      title: 'And much more...',
+      description:
+        '🚧: linked is ever progressing, send us your feedback to make linked even better.'
+    }
   }
 }

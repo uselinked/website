@@ -11,7 +11,7 @@ export default {
   comingSoon: 'In Kürze werden hier mehr Informationen stehen.',
   download: {
     title: 'Bereit einzutauchen?',
-    subTitle: 'Lade dir linked kostenlos runter.'
+    subTitle: 'Lade linked kostenlos runter.'
   },
   editor: {
     week: 'Woche',
@@ -43,5 +43,76 @@ export default {
     email: 'Gib deine@email.de ein',
     notify: 'Benachrichtige',
     privacy: 'Wir nehmen Datenschutz ernst. Lies unsere {privacyPolicy}'
+  },
+  discord: {
+    title: 'Bleib auf dem Laufenden!',
+    description:
+      'Tritt der Community auf Discord bei um immer auf dem letzten Stand zu sein, gib Feedback und vieles mehr.',
+    join: 'Werde Mitglied 👋'
+  },
+  feature: {
+    title: 'Notizen schreiben, aber anders.',
+    subtitle:
+      'Lasse Sticky Notes zurück und schreibe deine Gedanken in Tage, so viel du willst. linked ist ein Daily Journal, Tagebuch oder der Platz um einfach deine Gedanken nieder zu schreiben.',
+    editor: {
+      title: 'Editor',
+      description:
+        'Schreibe deinen Text kursiv, in fett oder füge Überschriften hinzu. Ebenso kannst du Listen oder Todos erstellen.'
+    },
+    theme: {
+      title: 'Dark und Lightmode',
+      description:
+        'linked gibt es im hellen und auch dunklen Design. Du kannst diese Seite oben rechts umschalten, probiers mal aus.'
+    },
+    keyboard: {
+      title: 'Tastatur Shortcuts',
+      description:
+        'Nutze deine Tastatur um schnell zwischen den Tagen hin und her zu springen - Wochen, Tage oder wieder zurück zum heutigen Tag.'
+    },
+    offline: {
+      title: 'Offline first',
+      description:
+        'Deine Daten werden lokal gespeichert, daher benötigst du keine Internet Verbindung - außer beim Updaten natürlich.'
+    },
+    language: {
+      title: 'Prefer english?',
+      description:
+        'linked wurde mittlerweile in 11 Sprachen übersetzt, da ist aucher auch was für dich dabei.'
+    },
+    design: {
+      title: 'Minimalistisches Design',
+      description:
+        "linked's minimalistisches Design hilft dir dabei dich auf das wesentliche zu fokussieren. Alles ist da wo du es brauchst."
+    },
+    search: {
+      title: 'Suche',
+      description:
+        '🚧: Nutze die Volltext Suche um deine Notizen schnell wieder zu finden.'
+    },
+    link: {
+      title: 'Links zwischen Tagen',
+      description:
+        '🚧: Du willst einen Tag in der Vergangenheit oder Zukunft mit dem aktuellen verknüpfen? Kein Problem.'
+    },
+    sync: {
+      title: 'Synchronisation',
+      description:
+        '🚧: Synchronisiere deine Daten zwischen allen deinen Geräten, so kannst du dort weitermachen wo du zuletzt aufgehört hast.'
+    },
+    teams: {
+      title: 'Du und deine Freunde',
+      description:
+        '🚧: Arbeitet zusammen. Live. Gemeinsam könnt ihr an Notizen arbeiten, egal ob im Team, mit deinen Freunden oder deinem Hund.'
+    },
+    devices: {
+      title: 'Desktop, Mobil & Web',
+      description:
+        '🚧: Nutze linked auf deinem PC, Handy oder im Browser - vielleicht sogar auf deinem Kühlschrank?'
+    },
+    more: {
+      title: 'Und vieles mehr...',
+      description:
+        '🚧: linked entwickelt sich stetig weiter, schick uns dein Feedback um linked umso besser zu machen.'
+    }
   }
 }

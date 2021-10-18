@@ -12,7 +12,7 @@ export default {
   comingSoon: 'We will announce more soon.',
   download: {
     title: 'Ready to dive in?',
-    subTitle: 'Download linked for free.'
+    subTitle: 'Download linked for free'
   },
   editor: {
     week: 'Week',

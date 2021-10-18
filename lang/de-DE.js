@@ -11,7 +11,7 @@ export default {
   comingSoon: 'In Kürze werden hier mehr Informationen stehen.',
   download: {
     title: 'Bereit einzutauchen?',
-    subTitle: 'Lade linked kostenlos runter.'
+    subTitle: 'Lade linked kostenlos runter'
   },
   editor: {
     week: 'Woche',

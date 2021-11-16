@@ -120,11 +120,11 @@ export default {
       .then((res) => res.json())
       .then((data) => {
         this.version = data.name
-        this.downloadLinks.mac = `${this.downloadLinks.base}${data.tag_name}/linked-${data.name}.dmg`
-        this.downloadLinks.linux.deb = `${this.downloadLinks.base}${data.tag_name}/linked-${data.name}_amd64.deb`
-        this.downloadLinks.linux.snap = `${this.downloadLinks.base}${data.tag_name}/linked-${data.name}_amd64.snap`
-        this.downloadLinks.linux.snap = `${this.downloadLinks.base}${data.tag_name}/linked-${data.name}.AppImage`
-        this.downloadLinks.windows = `${this.downloadLinks.base}${data.tag_name}/linked-${data.name}.exe`
+        this.downloadLinks.mac = `${this.downloadLinks.base}${data.tag_name}/linked_${data.name}.dmg`
+        this.downloadLinks.linux.deb = `${this.downloadLinks.base}${data.tag_name}/linked_${data.name}_amd64.deb`
+        this.downloadLinks.linux.snap = `${this.downloadLinks.base}${data.tag_name}/linked_${data.name}_amd64.snap`
+        this.downloadLinks.linux.snap = `${this.downloadLinks.base}${data.tag_name}/linked_${data.name}.AppImage`
+        this.downloadLinks.windows = `${this.downloadLinks.base}${data.tag_name}/linked_${data.name}.exe`
       })
   }
 }

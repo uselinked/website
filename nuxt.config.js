@@ -17,12 +17,20 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'An easy, distraction-free way to record your thoughts, declutter your mind and keep the things you want to remember.'
+      },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'msapplication-TileColor', content: '#ff005c' },
+      { name: 'theme-color', content: '#ff005c'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'mask-icon', color: '#ff005c', href: '/safari-pinned-tab.svg' },
       { rel: 'icon', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' }
@@ -98,8 +106,17 @@ export default {
   },
 
   i18n: {
+    baseUrl: 'https://new.uselinked.com',
     vueI18nLoader: true,
     defaultLocale: 'en',
-    locales: ['en', 'de'],
+    locales: [
+      {code: 'en', iso: 'en-US'},
+      {code: 'de', iso: 'de-DE'},
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    }
   }
 }

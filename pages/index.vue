@@ -25,11 +25,6 @@ export default {
           name: 'description',
           content: this.$t('description')
         },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: `https://new.uselinked.com/images/linked-app.png`,
-        },
       ]
     }
   }

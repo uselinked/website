@@ -24,7 +24,12 @@ export default {
       },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'msapplication-TileColor', content: '#ff005c' },
-      { name: 'theme-color', content: '#ff005c'}
+      { name: 'theme-color', content: '#ff005c'},
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://new.uselinked.com/images/logo.png',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

@@ -11,8 +11,12 @@
       </div>
       <ul role="list" class="flex flex-wrap">
         <template v-for="(contributor, index) in contributors">
-          <a v-if="contributor.login !== 'lostdesign'"
-            :href="contributor.html_url" ref="norel noopener" class="basis-1/2 sm:basis-1/3 md:basis-1/5 lg:basis-1/6 xl:basis-1/12 flex flex-col justify-center grow shrink-0 self-center items-center m-0 mb-6 sm:mb-0 sm:m-4 md:m-6 lg:m-8 space-y-4"
+          <a
+            v-if="contributor.login !== 'lostdesign'"
+            target="_blank"
+            :href="contributor.html_url"
+            ref="norel noopener"
+            class="basis-1/2 sm:basis-1/3 md:basis-1/5 lg:basis-1/6 xl:basis-1/12 flex flex-col justify-center grow shrink-0 self-center items-center m-0 mb-6 sm:mb-0 sm:m-4 md:m-6 lg:m-8 space-y-4"
           >
             <li>
               <img class="mx-auto h-24 w-24 md:h-20 md:w-20 rounded-full lg:w-24 lg:h-24" :src="contributor.avatar_url" :alt="`${contributor.login} profile image`" />

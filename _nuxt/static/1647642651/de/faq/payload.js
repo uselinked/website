@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/de/faq", {data:[{_img:{}}],fetch:{},mutations:void 0});

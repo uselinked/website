@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/de/changelog", (function(a){return {data:[{releaseList:a,error:a,_img:{}}],fetch:{},mutations:void 0}}(null)));

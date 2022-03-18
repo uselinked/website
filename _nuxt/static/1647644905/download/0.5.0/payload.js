@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/download/0.5.0", (function(a){return {data:[{release:a,error:a,fallbackUrl:"https:\u002F\u002Fgithub.com\u002Flostdesign\u002Flinked\u002Freleases\u002Ftags\u002Fv0.5.0",_img:{}}],fetch:{},mutations:void 0}}(null)));

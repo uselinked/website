@@ -1,13 +1,13 @@
 <template>
   <content-wrapper class="pt-16">
-    <page-heading title="About" />
+    <page-heading :title="$t('title')" />
     <p class="mt-4 text-lg text-gray-500">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, ratione, tempore. Accusantium adipisci aut beatae cumque deserunt esse et iusto laborum omnis voluptates. Animi aperiam at consequatur consequuntur cumque enim eos error et eum, eveniet exercitationem harum id illo laborum minus nihil non praesentium provident quasi quibusdam, quos rem rerum saepe sed ullam voluptate voluptatibus voluptatum. Ab accusamus ad adipisci aliquid beatae consequuntur dignissimos distinctio, doloribus exercitationem itaque libero magnam, nulla numquam optio quia quisquam, suscipit veritatis voluptates? Accusantium asperiores at culpa, ea eligendi ex exercitationem illum ipsa magni minus modi nemo nobis non nulla omnis, praesentium totam veniam voluptas!
     </p>
     <div class="space-y-4 sm:space-y-8 mt-12">
       <div class="space-y-5 sm:space-y-4 lg:max-w-5xl">
-        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">The lovely contributors</h2>
-        <p class="text-xl text-gray-500">Thanks to the awesome people that have contributed to linked already.</p>
+        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ $t('lovely_contributors') }}</h2>
+        <p class="text-xl text-gray-500">{{ $t('thanks') }}</p>
       </div>
       <ul role="list" class="flex flex-wrap">
         <template v-for="(contributor, index) in contributors">
@@ -61,3 +61,18 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "title": "About",
+    "lovely_contributors": "The lovely contributors",
+    "thanks": "Thanks to the awesome people that have contributed to linked."
+  },
+  "de": {
+    "title": "Über",
+    "lovely_contributors": "Mitwirkende",
+    "thanks": "Vielen Dank an alle, die zu linked beigetragen haben."
+  }
+}
+</i18n>

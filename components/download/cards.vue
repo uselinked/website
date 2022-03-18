@@ -3,7 +3,11 @@
     <div class="block space-y-4 md:space-y-0 md:flex justify-between items-center mb-12">
       <p>
         <span class="text-md rounded bg-linked text-white py-1 px-2 mr-4">Version {{ release.name }}</span>
-        <span class="text-gray-600">released {{ daysSince(release.published_at) }}</span>
+        <i18n path="released" tag="span" class="text-gray-600">
+          <template v-slot:date>
+            {{ daysSince(release.published_at) }}
+          </template>
+        </i18n>
       </p>
       <goto-github :page="release.html_url" />
     </div>
@@ -73,12 +77,12 @@ export default {
     daysSince(date) {
       return DateTime
         .fromISO(date)
-        .toRelative({locale: 'en-US'})
+        .toRelative({locale: this.$i18n.locale})
     },
     localeDate(date) {
       return DateTime
         .fromISO(date)
-        .setLocale('en-US')
+        .setLocale(this.$i18n.locale)
         .toLocaleString({day: 'numeric', month: 'long', year: 'numeric'})
     },
     getFilteredAssets(assets) {
@@ -91,3 +95,14 @@ export default {
   components: { DownloadIcon }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "released": "released {date}"
+  },
+  "de": {
+    "released": "{date} veröffentlicht"
+  }
+}
+</i18n>

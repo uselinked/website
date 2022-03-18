@@ -10,24 +10,24 @@
         <div class="grid grid-cols-2 gap-8 xl:col-span-4">
           <div class="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">Project</h3>
+              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.project') }}</h3>
                 <ul role="list" class="mt-4 space-y-4">
                   <template v-for="link in links.project">
                     <li>
                       <nuxt-link :to="link" class="text-base text-gray-200 hover:text-linked-200 capitalize">
-                        {{ link }}
+                        {{ $t(`link.${link}`) }}
                       </nuxt-link>
                     </li>
                   </template>
                 </ul>
             </div>
             <div class="mt-12 md:mt-0">
-              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">Support</h3>
+              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.support') }}</h3>
               <ul role="list" class="mt-4 space-y-4">
                 <template v-for="link in links.support">
                   <li>
                     <nuxt-link :to="link" class="text-base text-gray-200 hover:text-linked-200 capitalize">
-                      {{ link }}
+                      {{ $t(`link.${link}`) }}
                     </nuxt-link>
                   </li>
                 </template>
@@ -36,24 +36,24 @@
           </div>
           <div class="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">Legal</h3>
+              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.legal') }}</h3>
               <ul role="list" class="mt-4 space-y-4">
                 <template v-for="link in links.legal">
                   <li>
                     <nuxt-link :to="link" class="text-base text-gray-200 hover:text-linked-200 capitalize">
-                      {{ link }}
+                      {{ $t(`link.${link}`) }}
                     </nuxt-link>
                   </li>
                 </template>
               </ul>
             </div>
             <div class="mt-12 md:mt-0">
-              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">Contribution</h3>
+              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.contribution') }}</h3>
               <ul role="list" class="mt-4 space-y-4">
                 <template v-for="link in links.contribution">
                   <li>
                     <nuxt-link :to="link" class="text-base text-gray-200 hover:text-linked-200 capitalize">
-                      {{ link }}
+                      {{ $t(`link.${link}`) }}
                     </nuxt-link>
                   </li>
                 </template>
@@ -62,14 +62,14 @@
           </div>
         </div>
         <div class="mt-12 xl:mt-0">
-          <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">Language &amp; Currency</h3>
+          <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.language') }}</h3>
           <form class="mt-4 sm:max-w-xs">
             <fieldset class="w-full">
-              <label for="language" class="sr-only">Language</label>
+              <label for="language" class="sr-only">{{ $t('title.language') }}</label>
               <div class="relative">
                 <select id="language" name="language" class="appearance-none block w-full bg-none bg-linked-600 border border-transparent rounded-md py-2 pl-3 pr-10 text-base text-white focus:outline-none focus:ring-white focus:border-white sm:text-sm">
-                  <option selected>English</option>
-                  <option>German</option>
+                  <option selected>{{ $t('language.en') }}</option>
+                  <option>{{ $t('language.de') }}</option>
                 </select>
                 <div class="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
                   <chevron-down />
@@ -92,11 +92,70 @@ export default {
     return {
       links: {
         project: ['about', 'blog', 'roadmap' ],
-        support: [ 'Community', 'Guides', 'FAQ' ],
-        legal: [ 'Privacy', 'Terms', 'License' ],
+        support: [ 'community', 'guides', 'faq' ],
+        legal: [ 'privacy', 'terms', 'license' ],
         contribution: ['donate', 'translations', 'feedback' ]
       }
     }
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "title": {
+      "project": "Project",
+      "support": "Support",
+      "legal": "Legal",
+      "contribution": "Contribution",
+      "language": "Language"
+    },
+    "language:": {
+      "en": "English",
+      "de": "German"
+    },
+    "link": {
+      "about": "about",
+      "blog": "blog",
+      "roadmap": "roadmap",
+      "community": "community",
+      "guides": "guides",
+      "faq": "faq",
+      "privacy": "privacy",
+      "terms": "terms",
+      "license": "license",
+      "donate": "donate",
+      "translations": "translations",
+      "feedback": "feedback"
+    }
+  },
+  "de": {
+    "title": {
+      "project": "Projekt",
+      "support": "Support",
+      "legal": "Rechtliches",
+      "contribution": "Beitragen",
+      "language": "Sprache"
+    },
+    "language:": {
+      "en": "Englisch",
+      "de": "Deutsch"
+    },
+    "link": {
+      "about": "über",
+      "blog": "blog",
+      "roadmap": "roadmap",
+      "community": "community",
+      "guides": "Handbuch",
+      "faq": "FAQ",
+      "privacy": "Datenschutz",
+      "terms": "Bedingungen",
+      "license": "lizenz",
+      "donate": "spenden",
+      "translations": "übersetzungen",
+      "feedback": "feedback"
+    }
+  }
+}
+</i18n>

@@ -1,23 +1,9 @@
 <template>
   <content-wrapper class="pt-16">
-    <page-heading title="FAQ" />
-<!--    <h2 id="faq-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">Frequently asked questions</h2>-->
-    <h2 class="text-xl tracking-tight text-gray-900 max-w-2xl">Questions. Frequently asked ones. Plus our answers. That's how FAQs work. If you can't find what you're looking for, you can always
-      <a href="#" class="external-link font-medium text-linked-700 hover:text-linked-500">send us an email</a>
-      with your enquiry.</h2>
-<!--    <p class="mt-4 text-base text-gray-500">-->
-<!--      Questions. Frequently asked ones. Plus our answers. That's how FAQs work. If you can't find what you're looking for, you can always-->
-<!--      <a href="#" class="font-medium text-linked-700 hover:text-linked-500">send us an email</a>-->
-<!--      with your enquiry.-->
-<!--    </p>-->
-<!--    <dl class="mt-12 grid grid-cols-1 gap-y-10 sm:mt-16 md:grid-cols-2 md:gap-x-6 lg:grid-cols-3">-->
-<!--      <template v-for="(faq, index) in faqs">-->
-<!--        <div>-->
-<!--          <dt class="text-xl font-medium text-gray-900">{{ faq.question }}</dt>-->
-<!--          <dd class="mt-3 text-base leading-6 tracking-wide text-gray-700">{{ faq.answer }}</dd>-->
-<!--        </div>-->
-<!--      </template>-->
-<!--    </dl>-->
+    <page-heading :title="$t('title')" />
+    <i18n path="description" tag="h2" class="text-xl tracking-tight text-gray-900 max-w-2xl">
+      <a href="mailto:questions@uselinked.com" class="external-link font-medium text-linked-700 hover:text-linked-500">{{ $t('email') }}</a>
+    </i18n>
     <dl class="mt-12 space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-3">
       <div v-for="(faq, index) in faqs" :key="index">
         <dt class="text-xl leading-6 font-bold text-gray-900">{{ faq.question }}</dt>
@@ -49,3 +35,18 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "title": "FAQ",
+    "description": "Questions. Frequently asked ones. Plus our answers. That's how FAQs work. If you can't find what you're looking for, you can always {link} with your enquiry.",
+    "email": "send us an email"
+  },
+  "de": {
+    "title": "FAQ",
+    "description": "Fragen. Häufig gestellte Fragen. Und unsere Antworten. So funktionieren die FAQs. Wenn Sie nicht finden können, wonach Sie suchen, können Sie Ihre Anfrage jederzeit {link} an uns senden.",
+    "email": "per E-Mail"
+  }
+}
+</i18n>

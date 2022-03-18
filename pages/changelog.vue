@@ -56,7 +56,7 @@ export default {
           url: release.html_url,
           published_at: DateTime
             .fromISO(release.published_at)
-            .setLocale('en-US')
+            .setLocale(this.$i18n.locale)
             .toLocaleString({day: 'numeric', month: 'long', year: 'numeric'}),
           prerelease: release.prerelease
         }

@@ -76,6 +76,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -94,5 +95,11 @@ export default {
   sitemap: {
     hostname: 'https://uselinked.com',
     gzip: true,
+  },
+
+  i18n: {
+    vueI18nLoader: true,
+    defaultLocale: 'en',
+    locales: ['en', 'de'],
   }
 }

@@ -1,11 +1,23 @@
 <template>
-  <content-wrapper>
-    HERE IS DOWNLOAD
-  </content-wrapper>
+  <download-page
+    v-if="release"
+    :release="release"
+    :error="error"
+  />
 </template>
 
 <script>
+import { fetchRelease } from '@/lib/github'
+
 export default {
-  name: 'DownloadPage',
+  async asyncData() {
+    const { release, error, fallbackUrl } = await fetchRelease()
+
+    return {
+      release,
+      error,
+      fallbackUrl,
+    }
+  }
 }
 </script>

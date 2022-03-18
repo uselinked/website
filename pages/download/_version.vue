@@ -1,21 +1,23 @@
 <template>
-  <content-wrapper>
-    {{ $route.params.version }}
-    <pre>
-      {{ version.assets }}
-    </pre>
-  </content-wrapper>
+  <download-page
+    v-if="release"
+    :release="release"
+    :error="error"
+  />
 </template>
 
 <script>
-export default {
-  name: 'DownloadPage',
-  async asyncData({ params, redirect }) {
-    const version = await fetch(
-      'https://api.github.com/repos/lostdesign/linked/releases/tags/v' + params.version
-    ).then((res) => res.json())
+import { fetchRelease } from '@/lib/github'
 
-    return {version}
+export default {
+  async asyncData({ route }) {
+    const { release, error, fallbackUrl} = await fetchRelease(route.params.version)
+
+    return {
+      release,
+      error,
+      fallbackUrl,
+    }
   }
 }
 </script>

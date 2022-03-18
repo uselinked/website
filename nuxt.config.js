@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -19,18 +21,35 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'icon', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'manifest', href: '/site.webmanifest' }
     ]
+  },
+
+  generate: {
+    routes() {
+      return axios.get('https://api.github.com/repos/lostdesign/linked/releases?per_page=100').then(res => {
+        return res.data.map(download=> {
+          return '/download/' + download.name
+        })
+      })
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/common.css',
     '@/assets/css/strawford.css',
+    '@/assets/css/scrollbar.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/custom-device-flags.js'
+    '~/plugins/custom-device-flags.js',
+    '~/plugins/glide.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,6 +62,8 @@ export default {
     '@nuxtjs/svg',
     '@nuxt/image',
     '@nuxtjs/device',
+    '@/modules/sitemapRouteGenerator',
+    '@nuxtjs/sitemap'
   ],
 
   device: {
@@ -68,5 +89,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  sitemap: {
+    hostname: 'https://uselinked.com',
+    gzip: true,
   }
 }

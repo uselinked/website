@@ -46,7 +46,7 @@ export default {
         { title: 'The editor you need', icon: EditorIcon, detail: 'Complete control over the appearance of your writing, with extras like lists and todos.' },
         { title: 'Custom themes', icon: ThemeIcon, detail: 'Choose dark or light mode and easily switch between.' },
         { title: 'Keyboard shortcuts', icon: KeyboardIcon, detail: 'Complete keyboard control to navigate through the app.' },
-        { title: 'Offline first', icon: OfflineIcon, detail: 'There is no need for an internet connection - your data is stored locally ( take that Notion ).' },
+        { title: 'Offline first', icon: OfflineIcon, detail: 'There is no need for an internet connection - your data is stored locally (take that Notion).' },
         { title: 'We speak your language', icon: EarthIcon, detail: 'The linked interface has been translated into 11 languages, with more coming soon.' },
         { title: 'Minimal design', icon: DesignIcon, detail: 'Linked\'s minimal design helps you focus on writing, with the other features available only when you need them.' },
         { title: 'Search it all', icon: SearchIcon, detail: 'Use the full-text search to find what was once written down, lightning-fast.' },

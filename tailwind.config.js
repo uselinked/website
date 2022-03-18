@@ -1,16 +1,24 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
-console.log(...defaultTheme.fontFamily.sans)
-
-
 module.exports = {
   content: ['./**/*.vue'],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        'pink': '#D1014C',
-        'bright-pink': '#FF005C',
+        'linked': {
+          DEFAULT: '#FF005C',
+          '50': '#FFB8D1',
+          '100': '#FFA3C4',
+          '200': '#FF7AAA',
+          '300': '#FF5290',
+          '400': '#FF2976',
+          '500': '#FF005C',
+          '600': '#C70048',
+          '700': '#8F0034',
+          '800': '#57001F',
+          '900': '#1F000B'
+        },
         'secondary-black': '#222'
       },
       spacing: {
@@ -28,5 +36,7 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

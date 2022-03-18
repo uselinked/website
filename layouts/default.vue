@@ -1,6 +1,7 @@
 <template>
   <main>
-    <navigation />
+    <page-navigation />
     <nuxt />
+    <page-footer />
   </main>
 </template>

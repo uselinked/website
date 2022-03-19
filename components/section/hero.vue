@@ -10,7 +10,7 @@
     <div class="flex justify-center items-center mb-12 mt-8">
       <div class="md:grid md:grid-cols-3 gap-0 block">
         <nuxt-link
-          @click.native="$fathom.trackGoal('BHDSXIL0', 0)"
+          @click.native="trackClick('BHDSXIL0', 0)"
           to="/download"
           class="text-center col-start-2 self-start bg-linked px-6 py-3 m-2 rounded-lg text-lg md:text-2xl font-bold text-white hover:bg-linked-600"
         >
@@ -31,6 +31,13 @@ import EsIstKostenlos from '@/assets/svg/kostenlos.svg?inline=true'
 
 export default {
   components: { ItsFree, EsIstKostenlos },
+  methods: {
+    trackClick(goal) {
+      if (process.client) {
+        this.$fathom.trackGoal(goal, 0)
+      }
+    }
+  },
   computed: {
     getCtaSvg() {
       return this.$i18n.locale === 'en'

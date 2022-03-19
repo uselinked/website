@@ -7,7 +7,7 @@
           <h2 class="text-md mb-4 mt-8">
             <nuxt-link :to="`/download/${release.name}`" class="flex flex-col">
               <span class="text-3xl font-bold rounded-lg text-bright-pink"> {{ release.name }}</span>
-              <span class="text-sm font-regular">{{ release.published_at }}</span>
+              <span class="text-sm font-regular">{{ getLocaleDate(release.published_at) }}) }}</span>
             </nuxt-link>
           </h2>
           <nav class="flex justify-between md:justify-center items-center space-x-6 my-6 md:my-0">
@@ -33,6 +33,7 @@ import { marked } from 'marked'
 
 
 export default {
+  components: { DownloadIcon },
   async asyncData() {
     let error = null
 
@@ -46,7 +47,6 @@ export default {
       }
 
       const releases = await response.json()
-
       const releaseList = releases.map(release => {
         return {
           id: release.id,
@@ -54,10 +54,7 @@ export default {
           tag: release.tag_name,
           body: marked(release.body ?? ''),
           url: release.html_url,
-          published_at: DateTime
-            .fromISO(release.published_at)
-            .setLocale(this.$i18n.locale)
-            .toLocaleString({day: 'numeric', month: 'long', year: 'numeric'}),
+          published_at: release.published_at,
           prerelease: release.prerelease
         }
       })
@@ -73,6 +70,13 @@ export default {
       }
     }
   },
-  components: { DownloadIcon }
+  methods: {
+    getLocaleDate(date) {
+      return DateTime
+        .fromISO(date)
+        .setLocale(this.$i18n.locale)
+        .toLocaleString({day: 'numeric', month: 'long', year: 'numeric'})
+    }
+  }
 }
 </script>

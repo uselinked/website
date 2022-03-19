@@ -1,5 +1,5 @@
 <template>
-  <content-wrapper>
-    <page-heading title="GUIDE" />
+  <content-wrapper class="pt-16">
+    <page-heading title="GUIDE SLUG"/>
   </content-wrapper>
 </template>

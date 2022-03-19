@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="flex justify-center">
-      <nuxt-img src="/images/linked-app.png" alt="screenshot of linked" class="w-full md:w-1/2" lazy/>
+      <img src="/images/linked-app.png" alt="screenshot of linked" class="w-full md:w-1/2" lazy/>
     </div>
   </content-wrapper>
 </template>

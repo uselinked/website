@@ -88,7 +88,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxt/content',
     '@nuxtjs/i18n',
-    '@nuxt/image',
+    // '@nuxt/image',
     '@lostdesign/nuxt-fathom'
   ],
 

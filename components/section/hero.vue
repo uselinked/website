@@ -9,7 +9,11 @@
     </header>
     <div class="flex justify-center items-center mb-12 mt-8">
       <div class="md:grid md:grid-cols-3 gap-0 block">
-        <nuxt-link to="/download" class="text-center col-start-2 self-start bg-linked px-6 py-3 m-2 rounded-lg text-lg md:text-2xl font-bold text-white hover:bg-linked-600">
+        <nuxt-link
+          @click.native="$fathom.trackGoal('BHDSXIL0')"
+          to="/download"
+          class="text-center col-start-2 self-start bg-linked px-6 py-3 m-2 rounded-lg text-lg md:text-2xl font-bold text-white hover:bg-linked-600"
+        >
           {{ $t('start_today')}}
         </nuxt-link>
         <component :is="getCtaSvg" class="hidden md:block opacity-75" />

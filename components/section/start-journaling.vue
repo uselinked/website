@@ -16,6 +16,7 @@
         <div class="flex flex-col items-center space-y-4 mt-8 self-end">
           <template v-for="(os, index) in downloadButtons">
             <nuxt-link
+              @click.native="trackIndexOsDownloadButton(os.name)"
               to="/download"
               class="flex w-full justify-center items-center space-x-2 text-center col-start-2 self-start bg-linked pl-6 pr-8 py-2 rounded-lg text-lg font-bold text-white hover:bg-linked-600"
             >
@@ -47,6 +48,16 @@ export default {
         { name: 'Windows', icon: IconWindows, iconFix: '-mt-0.5' },
         { name: 'Linux' , icon: IconLinux, iconFix: '-mt-0.5' }
       ]
+    }
+  },
+  methods: {
+    trackIndexOsDownloadButton(os) {
+      const osButtons = {
+        'MacOS': 'HMRC99CJ',
+        'Windows': 'BQN6MIYU',
+        'Linux': 'XRNNC7PG'
+      }
+      this.$fathom.trackGoal(osButtons[os])
     }
   }
 }

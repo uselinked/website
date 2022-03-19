@@ -60,15 +60,20 @@ export default {
     },
     getOperatingSystemName(fileName) {
       const extension = fileName.split('.')
-      return {
+      const extensions = {
         'dmg': 'MacOS',
-        // 'Setup': 'Windows Installer',
         'exe': 'Windows Portable',
         'deb': 'Debian',
         'AppImage': 'Linux',
         'rpm': 'Fedora',
         'pacman': 'Arch',
-      }[extension[extension.length - 1]]
+      }
+
+      if(extension[0].includes('Setup')) {
+        return 'Windows Installer'
+      }
+
+      return extensions[extension[extension.length-1]]
     },
     sumArray(array) {
       if (array.length === 0) return 0

@@ -7,7 +7,7 @@
           <h2 class="text-md mb-4 mt-8">
             <nuxt-link :to="`/download/${release.name}`" class="flex flex-col">
               <span class="text-3xl font-bold rounded-lg text-bright-pink"> {{ release.name }}</span>
-              <span class="text-sm font-regular">{{ getLocaleDate(release.published_at) }}) }}</span>
+              <span class="text-sm font-regular">{{ getLocaleDate(release.published_at) }}</span>
             </nuxt-link>
           </h2>
           <nav class="flex justify-between md:justify-center items-center space-x-6 my-6 md:my-0">

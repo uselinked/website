@@ -2,17 +2,17 @@
   <div>
     <div class="block space-y-4 md:space-y-0 md:flex justify-between items-center mb-12">
       <p>
-        <span class="text-md rounded bg-linked text-white py-1 px-2 mr-4">Version {{ release.name }}</span>
+        <span class="text-md rounded bg-linked text-white py-1 px-2 mr-4">Version {{ $props.release.name }}</span>
         <i18n path="released" tag="span" class="text-gray-600">
           <template v-slot:date>
-            {{ daysSince(release.published_at) }}
+            {{ daysSince($props.release.published_at) }}
           </template>
         </i18n>
       </p>
-      <goto-github :page="release.html_url" />
+      <goto-github :page="$props.release.html_url" />
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6">
-      <template v-for="asset in getFilteredAssets(release.assets)">
+      <template v-for="asset in getFilteredAssets($props.release.assets)">
         <a :href="asset.browser_download_url" class="bg-gray-100 border-gray-200 border-2 p-4 md:p-8 rounded-lg flex items-center space-x-4 group hover:border-linked hover:text-bright-pink" :key="asset.id">
           <download-icon class="w-5 h-5"/>
           <div>

@@ -1,8 +1,8 @@
 <template>
-  <content-wrapper class="pt-16">
+  <content-wrapper class="pt-16 mb-24">
     <page-heading :title="`Download`"/>
-    <download-cards v-if="release" :release="release" />
-    <github-error :error="error" />
+    <download-cards v-if="$props.release" :release="$props.release" />
+    <github-error :error="$props.error" />
   </content-wrapper>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <a :href="page" class="flex items-center space-x-2 link-hover" target="_blank" ref="norel noopener">
+  <a :href="$props.page" class="flex items-center space-x-2 link-hover" target="_blank" ref="norel noopener">
     <icon-github class="w-5 h-5" />
     <span>Check on Github</span>
     <icon-external class="w-4 h-4" />

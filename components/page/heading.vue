@@ -1,6 +1,6 @@
 <template>
   <h1 class="-ml-1.5 mb-4 p-1 text-4xl sm:text-5xl lg:text-6xl font-bold">
-    {{ title }}
+    {{ $props.title }}
   </h1>
 </template>
 

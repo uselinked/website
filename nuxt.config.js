@@ -3,6 +3,7 @@ import axios from 'axios'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: false,
 
   server: {
     host: '0' // default: localhost
@@ -85,12 +86,26 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/i18n',
+    '@lostdesign/nuxt-fathom'
   ],
+
+  nuxtFathom: {
+    debug: true,
+    spa: 'history',
+    siteId: 'CGHPCEJF',
+    includedDomains: [
+      'localhost',
+      'localhost:3000',
+      'uselinked.com'
+    ],
+  },
+
+  router: {
+    middleware: ['fathom']
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

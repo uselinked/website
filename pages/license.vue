@@ -296,15 +296,3 @@
     </div>
   </content-wrapper>
 </template>
-<script>
-export default {
-  async asyncData() {
-    const license = await fetch('https://api.github.com/licenses/gpl-3.0')
-      .then((res) => res.json())
-
-    return {
-      license
-    }
-  }
-}
-</script>

@@ -111,7 +111,7 @@ export default {
       "contribution": "Contribution",
       "language": "Language"
     },
-    "language:": {
+    "language": {
       "en": "English",
       "de": "German"
     },
@@ -138,7 +138,7 @@ export default {
       "contribution": "Beitragen",
       "language": "Sprache"
     },
-    "language:": {
+    "language": {
       "en": "Englisch",
       "de": "Deutsch"
     },

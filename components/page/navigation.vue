@@ -10,14 +10,14 @@
         </div>
         <ul class="space-x-6">
           <nuxt-link
-            @click.native="$fathom.trackGoal('QFYXOLNL')"
+            @click.native="$fathom.trackGoal('QFYXOLNL', 0)"
             to="/changelog"
             class="link-hover"
           >
             Changelog
           </nuxt-link>
           <nuxt-link
-            @click.native="$fathom.trackGoal('LCNP5VTH')"
+            @click.native="$fathom.trackGoal('LCNP5VTH', 0)"
             to="/download"
             class="link-hover"
           >

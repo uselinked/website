@@ -57,7 +57,7 @@ export default {
         'Windows': 'BQN6MIYU',
         'Linux': 'XRNNC7PG'
       }
-      this.$fathom.trackGoal(osButtons[os])
+      this.$fathom.trackGoal(osButtons[os], 0)
     }
   }
 }

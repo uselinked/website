@@ -74,7 +74,6 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
-    '@nuxt/image',
     '@nuxtjs/device',
     '@/modules/sitemapRouteGenerator',
     '@nuxtjs/sitemap'
@@ -89,6 +88,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxt/content',
     '@nuxtjs/i18n',
+    '@nuxt/image',
     '@lostdesign/nuxt-fathom'
   ],
 

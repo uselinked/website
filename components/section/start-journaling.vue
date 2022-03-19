@@ -15,14 +15,15 @@
       <div class="w-full md:w-2/5">
         <div class="flex flex-col items-center space-y-4 mt-8 self-end">
           <template v-for="(os, index) in downloadButtons">
-            <nuxt-link
+            <a
               @click.native="trackIndexOsDownloadButton(os.name)"
-              to="/download"
+              :href="os.link"
               class="flex w-full justify-center items-center space-x-2 text-center col-start-2 self-start bg-linked pl-6 pr-8 py-2 rounded-lg text-lg font-bold text-white hover:bg-linked-600"
+              download
             >
               <component :is="os.icon" :class="os.iconFix" />
               <span>{{ os.name }}</span>
-            </nuxt-link>
+            </a>
           </template>
         </div>
         <p class="mt-2 text-gray-500">
@@ -30,7 +31,6 @@
         </p>
       </div>
     </div>
-
   </content-wrapper>
 </template>
 
@@ -41,12 +41,18 @@ import IconWindows from '@/assets/svg/operating-systems/windows.svg?inline=true'
 
 export default {
   components: { IconLinux, IconMacOs, IconWindows },
+  props: {
+    assets: {
+      type: Object,
+      default: () => {}
+    }
+  },
   data() {
     return {
       downloadButtons: [
-        { name: 'MacOS', icon: IconMacOs, iconFix: '-mt-1' },
-        { name: 'Windows', icon: IconWindows, iconFix: '-mt-0.5' },
-        { name: 'Linux' , icon: IconLinux, iconFix: '-mt-0.5' }
+        { name: 'MacOS', icon: IconMacOs, iconFix: '-mt-1', link: this.$props.assets.macos[0].browser_download_url },
+        { name: 'Windows', icon: IconWindows, iconFix: '-mt-0.5', link: this.$props.assets.windows[0].browser_download_url },
+        { name: 'Linux' , icon: IconLinux, iconFix: '-mt-0.5', link: this.$props.assets.linux[0].browser_download_url }
       ]
     }
   },

@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-linked-700 mt-12" aria-labelledby="footer-heading">
+  <footer class="bg-linked-600 mt-12" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div class="mb-8 pb-8 md:flex md:items-center md:justify-between">
@@ -63,20 +63,7 @@
         </div>
         <div class="mt-12 xl:mt-0">
           <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.language') }}</h3>
-          <form class="mt-4 sm:max-w-xs">
-            <fieldset class="w-full">
-              <label for="language" class="sr-only">{{ $t('title.language') }}</label>
-              <div class="relative">
-                <select id="language" name="language" class="appearance-none block w-full bg-none bg-linked-600 border border-transparent rounded-md py-2 pl-3 pr-10 text-base text-white focus:outline-none focus:ring-white focus:border-white sm:text-sm">
-                  <option selected>{{ $t('language.en') }}</option>
-                  <option>{{ $t('language.de') }}</option>
-                </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
-                  <chevron-down />
-                </div>
-              </div>
-            </fieldset>
-          </form>
+          <language-dropdown />
         </div>
       </div>
     </div>

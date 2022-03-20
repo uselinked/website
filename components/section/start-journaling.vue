@@ -15,15 +15,30 @@
       <div class="w-full md:w-2/5">
         <div class="flex flex-col items-center space-y-4 mt-8 self-end">
           <template v-for="(os, index) in downloadButtons">
-            <a
-              @click.native="trackIndexOsDownloadButton(os.name)"
-              :href="os.link"
-              class="flex w-full justify-center items-center space-x-2 text-center col-start-2 self-start bg-linked pl-6 pr-8 py-2 rounded-lg text-lg font-bold text-white hover:bg-linked-600"
-              download
-            >
-              <component :is="os.icon" :class="os.iconFix" />
-              <span>{{ os.name }}</span>
-            </a>
+
+            <template v-if="os.link">
+              <a
+                @click="trackIndexOsDownloadButton(os.name)"
+                :href="os.link"
+                class="flex w-full justify-center items-center space-x-2 text-center col-start-2 self-start bg-linked pl-6 pr-8 py-2 rounded-lg text-lg font-bold text-white hover:bg-linked-600"
+                download
+              >
+                <component :is="os.icon" :class="os.iconFix" />
+                <span>{{ os.name }}</span>
+              </a>
+
+            </template>
+            <template v-else>
+              <nuxt-link
+                @click="trackIndexOsDownloadButton(os.name)"
+                to="download"
+                class="flex w-full justify-center items-center space-x-2 text-center col-start-2 self-start bg-linked pl-6 pr-8 py-2 rounded-lg text-lg font-bold text-white hover:bg-linked-600"
+                download
+              >
+                <component :is="os.icon" :class="os.iconFix" />
+                <span>{{ os.name }}</span>
+              </nuxt-link>
+            </template>
           </template>
         </div>
         <p class="mt-2 text-gray-500">
@@ -50,9 +65,9 @@ export default {
   data() {
     return {
       downloadButtons: [
-        { name: 'MacOS', icon: IconMacOs, iconFix: '-mt-1', link: this.$props.assets.macos[0].browser_download_url },
-        { name: 'Windows', icon: IconWindows, iconFix: '-mt-0.5', link: this.$props.assets.windows[0].browser_download_url },
-        { name: 'Linux' , icon: IconLinux, iconFix: '-mt-0.5', link: this.$props.assets.linux[0].browser_download_url }
+        { name: 'MacOS', icon: IconMacOs, iconFix: '-mt-1', link: this.$props.assets?.macos[0]?.browser_download_url ?? null },
+        { name: 'Windows', icon: IconWindows, iconFix: '-mt-0.5', link: this.$props.assets?.windows[0]?.browser_download_url ?? null },
+        { name: 'Linux' , icon: IconLinux, iconFix: '-mt-0.5', link: this.$props.assets?.linux[0]?.browser_download_url ?? null }
       ]
     }
   },

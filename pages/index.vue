@@ -32,17 +32,23 @@ export default {
   async asyncData() {
     const { release, error, fallbackUrl} = await fetchRelease()
 
-    return {
-      assets: {
+    let assets
+
+    if (release?.assets) {
+      assets = {
         windows: release.assets
           .filter(asset => asset.name.includes('Setup'))
           .filter(asset => !asset.name.includes('blockmap')),
-        macos: release.assets
+          macos: release.assets
           .filter(asset => asset.name.includes('dmg'))
           .filter(asset => !asset.name.includes('blockmap')),
-        linux: release.assets
+          linux: release.assets
           .filter(asset => asset.name.includes('AppImage'))
-      },
+      }
+    }
+
+    return {
+      assets: assets ?? null,
       error,
       fallbackUrl,
     }

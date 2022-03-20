@@ -20,7 +20,7 @@
             <footer class="mt-8">
               <div class="md:flex md:items-center md:justify-center">
                 <div class="md:flex-shrink-0">
-                  <img class="mx-auto h-10 w-10 rounded-full" :src="testimonial.image" alt="">
+                  <img class="mx-auto h-10 w-10 rounded-full" :src="testimonial.image" alt="" loading=lazy>
                 </div>
                 <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
                   <div class="text-base font-medium text-gray-900">{{ testimonial.name }}</div>

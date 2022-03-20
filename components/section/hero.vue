@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="flex justify-center">
-      <img src="/images/linked-app.png" alt="screenshot of linked" class="w-full md:w-1/2" lazy/>
+      <img src="/images/linked-app.png" alt="screenshot of linked" class="w-full md:w-1/2" loading=lazy width="1164" height="1776"/>
     </div>
   </content-wrapper>
 </template>

@@ -2,7 +2,7 @@
   <content-wrapper class="pt-16">
     <page-heading title="Changelog"/>
     <template v-if="releaseList" v-for="release in releaseList">
-      <div v-if="!release.draft" class="mb-4 md:mb-8 bg-gray-100 border-gray-200 border-2 px-6 md:px-8 pb-8 rounded-lg" :key="release.id">
+      <div v-if="!release.draft" class="mb-6 md:mb-12 bg-gray-50 border-gray-200 border-2 px-6 md:px-8 pb-8 rounded-lg" :key="release.id">
         <header class="block md:flex justify-between items-center">
           <h2 class="text-md mb-4 mt-8">
             <nuxt-link :to="localePath(`/download/${release.name}`)" class="flex flex-col">

@@ -91,8 +91,7 @@ export default {
     '@lostdesign/nuxt-fathom'
   ],
 
-  nuxtFathom: {
-    debug: true,
+  fathom: {
     spa: 'history',
     siteId: 'CGHPCEJF',
     includedDomains: [

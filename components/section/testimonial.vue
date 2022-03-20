@@ -13,7 +13,7 @@
     >
       <vue-glide-slide v-for="(testimonial, index) in testimonials" :key="index">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <blockquote class="mt-10">
+          <blockquote class="mt-10 mb-6">
             <div class="relative max-w-3xl mx-auto text-center text-xl leading-9 font-medium text-gray-900 relative">
               <p>&ldquo;{{ testimonial.text }}&rdquo;</p>
             </div>
@@ -24,7 +24,13 @@
                 </div>
                 <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
                   <div class="text-base font-medium text-gray-900">{{ testimonial.name }}</div>
-                  <a class="inline-block" v-if="testimonial.twitter" :href="testimonial.twitter" rel="noreferrer noopener">
+                  <a
+                    v-if="testimonial.twitter"
+                    class="inline-block"
+                    :href="testimonial.twitter"
+                    rel="noreferrer noopener"
+                    :aria-label="`Visit ${testimonial.name} on twitter`"
+                  >
                     <icon-twitter class="text-blue-400 hover:text-blue-700" />
                   </a>
                 </div>

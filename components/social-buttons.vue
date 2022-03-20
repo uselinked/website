@@ -10,12 +10,12 @@
 <!--      <icon-instagram />-->
 <!--    </a>-->
 
-    <a href="#" class="text-gray-100 hover:text-linked-200">
+    <a href="https://twitter.com/uselinked" target="_blank" rel="noopener norel" class="text-gray-100 hover:text-linked-200">
       <span class="sr-only">Twitter</span>
       <icon-twitter />
     </a>
 
-    <a href="#" class="text-gray-100 hover:text-linked-200">
+    <a href="https://github.com/uselinked" target="_blank" rel="noopener norel" class="text-gray-100 hover:text-linked-200">
       <span class="sr-only">GitHub</span>
       <icon-github />
     </a>

@@ -42,7 +42,7 @@
           </template>
         </div>
         <p class="mt-2 text-gray-500">
-          Missing yours? Check <nuxt-link class="link-hover font-bold" to="download">here</nuxt-link>.
+          Missing yours? <nuxt-link class="link-hover font-bold" to="download">Find more downloads here</nuxt-link>.
         </p>
       </div>
     </div>

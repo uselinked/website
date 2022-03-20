@@ -5,13 +5,13 @@
       <div v-if="!release.draft" class="mb-4 md:mb-8 bg-gray-100 border-gray-200 border-2 px-6 md:px-8 pb-8 rounded-lg" :key="release.id">
         <header class="block md:flex justify-between items-center">
           <h2 class="text-md mb-4 mt-8">
-            <nuxt-link :to="`/download/${release.name}`" class="flex flex-col">
+            <nuxt-link :to="localePath(`/download/${release.name}`)" class="flex flex-col">
               <span class="text-3xl font-bold rounded-lg text-bright-pink"> {{ release.name }}</span>
               <span class="text-sm font-regular">{{ getLocaleDate(release.published_at) }}</span>
             </nuxt-link>
           </h2>
           <nav class="flex justify-between md:justify-center items-center space-x-6 my-6 md:my-0">
-            <nuxt-link :to="`/download/${release.name}`" class="flex justify-center items-center space-x-2 link-hover">
+            <nuxt-link :to="localePath(`/download/${release.name}`)" class="flex justify-center items-center space-x-2 link-hover">
               <download-icon class="w-5 h-5"/>
               <span>Download</span>
             </nuxt-link>

@@ -14,7 +14,7 @@
                 <ul role="list" class="mt-4 space-y-4">
                   <template v-for="link in links.project">
                     <li>
-                      <nuxt-link :to="link" class="text-base text-gray-200 hover:text-linked-200 capitalize">
+                      <nuxt-link :to="localePath(link)" class="text-base text-gray-200 hover:text-linked-200 capitalize">
                         {{ $t(`link.${link}`) }}
                       </nuxt-link>
                     </li>
@@ -26,7 +26,7 @@
               <ul role="list" class="mt-4 space-y-4">
                 <template v-for="link in links.support">
                   <li>
-                    <nuxt-link :to="link" class="text-base text-gray-200 hover:text-linked-200 capitalize">
+                    <nuxt-link :to="localePath(link)" class="text-base text-gray-200 hover:text-linked-200 capitalize">
                       {{ $t(`link.${link}`) }}
                     </nuxt-link>
                   </li>
@@ -40,7 +40,7 @@
               <ul role="list" class="mt-4 space-y-4">
                 <template v-for="link in links.legal">
                   <li>
-                    <nuxt-link :to="link" class="text-base text-gray-200 hover:text-linked-200 capitalize">
+                    <nuxt-link :to="localePath(link)" class="text-base text-gray-200 hover:text-linked-200 capitalize">
                       {{ $t(`link.${link}`) }}
                     </nuxt-link>
                   </li>
@@ -52,7 +52,7 @@
               <ul role="list" class="mt-4 space-y-4">
                 <template v-for="link in links.contribution">
                   <li>
-                    <nuxt-link :to="link" class="text-base text-gray-200 hover:text-linked-200 capitalize">
+                    <nuxt-link :to="localePath(link)" class="text-base text-gray-200 hover:text-linked-200 capitalize">
                       {{ $t(`link.${link}`) }}
                     </nuxt-link>
                   </li>

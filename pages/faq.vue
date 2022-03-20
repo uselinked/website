@@ -45,7 +45,7 @@ export default {
   },
   "de": {
     "title": "FAQ",
-    "description": "Fragen. Häufig gestellte Fragen. Und unsere Antworten. So funktionieren die FAQs. Wenn Sie nicht finden können, wonach Sie suchen, können Sie Ihre Anfrage jederzeit {link} an uns senden.",
+    "description": "Fragen. Häufig gestellte Fragen. Und unsere Antworten. So funktionieren die FAQs. Wenn Du nicht finden konntest, wonach Du gesucht hast, kannst Du deine Anfrage jederzeit {link} an uns senden.",
     "email": "per E-Mail"
   }
 }

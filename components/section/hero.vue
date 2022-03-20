@@ -11,7 +11,7 @@
       <div class="md:grid md:grid-cols-3 gap-0 block">
         <nuxt-link
           @click.native="trackClick('BHDSXIL0', 0)"
-          to="/download"
+          :to="localePath('download')"
           class="text-center col-start-2 self-start bg-linked px-6 py-3 m-2 rounded-lg text-lg md:text-2xl font-bold text-white hover:bg-linked-600"
         >
           {{ $t('start_today')}}
@@ -59,7 +59,7 @@ export default {
   "de": {
     "daily_journaling": "Tägliches Journaling",
     "without_distraction": "ohne Ablenkung.",
-    "subline": "Eine einfache, ablenkungsfreie Möglichkeit, Ihre Gedanken festzuhalten, zu ordnen und die Dinge zu behalten, an die Sie sich erinnern wollen.",
+    "subline": "Eine einfache, ablenkungsfreie Möglichkeit, deine Gedanken festzuhalten, zu ordnen und die Dinge zu behalten, an die Du dich erinnern willst.",
     "start_today": "Starte jetzt"
   }
 }

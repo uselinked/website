@@ -9,13 +9,13 @@
           </nuxt-link>
         </div>
         <ul class="space-x-6">
-          <nuxt-link
+          <!--<nuxt-link
             @click.native="trackClick('QFYXOLNL')"
             :to="localePath('changelog')"
             class="link-hover"
           >
             Changelog
-          </nuxt-link>
+          </nuxt-link>-->
           <nuxt-link
             @click.native="trackClick('LCNP5VTH', 0)"
             :to="localePath('download')"

@@ -1,6 +1,5 @@
 <template>
   <download-page
-    v-if="release"
     :release="release"
     :error="error"
   />

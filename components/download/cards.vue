@@ -13,7 +13,7 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6">
       <template v-for="asset in getFilteredAssets($props.release.assets)">
-        <a :href="asset.browser_download_url" class="bg-gray-100 border-gray-200 border-2 p-4 md:p-8 rounded-lg flex items-center space-x-4 group hover:border-linked hover:text-bright-pink" :key="asset.id">
+        <a :href="asset.browser_download_url" class="bg-gray-50 border-gray-200 border-2 p-4 md:p-8 rounded-lg flex items-center space-x-4 group hover:border-linked hover:text-bright-pink" :key="asset.id">
           <download-icon class="w-5 h-5"/>
           <div>
             <h2 class="text-xl">{{ getOperatingSystemName(asset.name) }}</h2>

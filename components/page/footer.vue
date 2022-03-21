@@ -36,9 +36,9 @@
           </div>
           <div class="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.legal') }}</h3>
+              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.contribution') }}</h3>
               <ul role="list" class="mt-4 space-y-4">
-                <template v-for="link in links.legal">
+                <template v-for="link in links.contribution">
                   <li>
                     <nuxt-link :to="localePath(link)" class="text-base text-gray-200 hover:text-linked-200 capitalize">
                       {{ $t(`link.${link}`) }}
@@ -48,9 +48,9 @@
               </ul>
             </div>
             <div class="mt-12 md:mt-0">
-              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.contribution') }}</h3>
+              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase">{{ $t('title.legal') }}</h3>
               <ul role="list" class="mt-4 space-y-4">
-                <template v-for="link in links.contribution">
+                <template v-for="link in links.legal">
                   <li>
                     <nuxt-link :to="localePath(link)" class="text-base text-gray-200 hover:text-linked-200 capitalize">
                       {{ $t(`link.${link}`) }}
@@ -78,10 +78,10 @@ export default {
   data() {
     return {
       links: {
-        project: ['about', 'blog', 'roadmap' ],
-        support: [ 'community', 'guides', 'faq' ],
-        legal: [ 'privacy', 'terms', 'license' ],
-        contribution: ['donate', 'translations', 'feedback' ]
+        project: ['about', 'blog', 'roadmap', 'changelog' ],
+        support: [ 'community', 'faq', 'guides', 'media' ],
+        legal: [ 'legal', 'privacy', 'terms', 'license' ],
+        contribution: ['donate', 'feedback', 'translations', 'development' ]
       }
     }
   }
@@ -114,7 +114,11 @@ export default {
       "license": "license",
       "donate": "donate",
       "translations": "translations",
-      "feedback": "feedback"
+      "feedback": "feedback",
+      "changelog": "changelog",
+      "legal": "legal",
+      "media": "media",
+      "development": "development"
     }
   },
   "de": {
@@ -141,7 +145,11 @@ export default {
       "license": "lizenz",
       "donate": "spenden",
       "translations": "übersetzungen",
-      "feedback": "feedback"
+      "feedback": "feedback",
+      "changelog": "änderungen",
+      "legal": "impressum",
+      "media": "medien",
+      "development": "entwicklung"
     }
   }
 }

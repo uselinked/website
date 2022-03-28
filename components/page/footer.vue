@@ -40,9 +40,20 @@
               <ul role="list" class="mt-4 space-y-4">
                 <template v-for="link in links.contribution">
                   <li>
-                    <nuxt-link :to="localePath(link)" class="text-base text-gray-200 hover:text-linked-200 capitalize">
-                      {{ $t(`link.${link}`) }}
-                    </nuxt-link>
+                    <template v-if="typeof link === 'object'">
+                      <nuxt-link
+                        :to="localePath(link.route)"
+                        @click.native="trackClick(link.code)"
+                        class="text-base text-gray-200 hover:text-linked-200 capitalize"
+                      >
+                        {{ $t(`link.${link.route}`) }}
+                      </nuxt-link>
+                    </template>
+                    <template v-else>
+                      <nuxt-link :to="localePath(link)" class="text-base text-gray-200 hover:text-linked-200 capitalize">
+                        {{ $t(`link.${link}`) }}
+                      </nuxt-link>
+                    </template>
                   </li>
                 </template>
               </ul>
@@ -81,8 +92,18 @@ export default {
         project: ['about', 'blog', 'roadmap', 'changelog' ],
         support: [ 'community', 'faq', 'guides', 'media' ],
         legal: [ 'legal', 'privacy', 'terms', 'license' ],
-        contribution: ['donate', 'feedback', 'translations', 'development' ]
+        contribution: [
+          { route:'donate', code: 'WPSZXYCR' },
+          'feedback',
+          'translations',
+          'development'
+        ]
       }
+    }
+  },
+  methods: {
+    trackClick(code) {
+      this.$fathom.trackGoal(code, 0)
     }
   }
 }

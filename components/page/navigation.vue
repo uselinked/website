@@ -17,11 +17,20 @@
             Changelog
           </nuxt-link>-->
           <nuxt-link
+            @click.native="trackClick('9N6TIFUD', 0)"
+            :to="localePath('donate')"
+            class="hover:bg-black/5 hover:text-linked space-x-2 transition-all duration-300 inline-flex items-center justify-center py-2 px-3 rounded-lg"
+          >
+            <icon-donate />
+            <span>Donate</span>
+          </nuxt-link>
+          <nuxt-link
             @click.native="trackClick('LCNP5VTH', 0)"
             :to="localePath('download')"
-            class="link-hover"
+            class="hover:bg-black/5 hover:text-linked space-x-2 transition-all duration-300 inline-flex items-center justify-center py-2 px-3 rounded-lg"
           >
-            Download
+            <icon-download-cloud />
+            <span>Download</span>
           </nuxt-link>
         </ul>
       </div>
@@ -30,10 +39,12 @@
 </template>
 
 <script>
-import Logo from '@/assets/svg/logo.svg?inline'
+import Logo from '@/assets/svg/logo.svg?inline=true'
+import IconDownloadCloud from "@/assets/svg/download-cloud.svg?inline=true";
+import IconDonate from "@/assets/svg/donate.svg?inline=true";
 
 export default {
-  components: { Logo },
+  components: { Logo, IconDownloadCloud, IconDonate },
   methods: {
     trackClick(goal) {
       if (process.client) {

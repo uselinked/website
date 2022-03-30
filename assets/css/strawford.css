@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Strawford';
+  font-family: 'Strawford', sans-serif;
   font-display: swap;
   src: url('../fonts/strawford-black-webfont.eot');
   src: url('../fonts/strawford-black-webfont.eot?#iefix') format('embedded-opentype'),
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford';
+  font-family: 'Strawford', sans-serif;
   font-display: swap;
   src: url('../fonts/strawford-bold-webfont.eot');
   src: url('../fonts/strawford-bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford';
+  font-family: 'Strawford', sans-serif;
   font-display: swap;
   src: url('../fonts/strawford-medium-webfont.eot');
   src: url('../fonts/strawford-medium-webfont.eot?#iefix') format('embedded-opentype'),
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford';
+  font-family: 'Strawford', sans-serif;
   font-display: swap;
   src: url('../fonts/strawford-light-webfont.eot');
   src: url('../fonts/strawford-light-webfont.eot?#iefix') format('embedded-opentype'),
@@ -47,7 +47,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford';
+  font-family: 'Strawford', sans-serif;
   font-display: swap;
   src: url('../fonts/strawford-extralight-webfont.eot');
   src: url('../fonts/strawford-extralight-webfont.eot?#iefix') format('embedded-opentype'),
@@ -59,7 +59,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford';
+  font-family: 'Strawford', sans-serif;
   font-display: swap;
   src: url('../fonts/strawford-thin-webfont.eot');
   src: url('../fonts/strawford-thin-webfont.eot?#iefix') format('embedded-opentype'),
@@ -71,7 +71,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford';
+  font-family: 'Strawford', sans-serif;
   font-display: swap;
   src: url('../fonts/strawford-regular-webfont.eot');
   src: url('../fonts/strawford-regular-webfont.eot?#iefix') format('embedded-opentype'),

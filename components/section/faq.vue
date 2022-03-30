@@ -1,12 +1,10 @@
 <template>
   <section aria-labelledby="faq-heading" class="bg-white">
     <content-wrapper>
-      <h2 class="text-3xl font-extrabold text-gray-900">Frequently asked questions</h2>
-      <p class="mt-4 text-lg leading-9 text-gray-500">
-        Questions. Frequently asked ones. Plus our answers. That's how FAQs work. If you can't find what you're looking for, you can always
-        <a href="#" class="external-link font-medium text-linked-700 hover:text-linked-500">send us an email</a>
-        with your enquiry.
-      </p>
+      <h2 class="text-3xl font-extrabold text-gray-900">{{ $t('title') }}</h2>
+      <i18n path="description" tag="h2" class="text-xl tracking-tight text-gray-900 max-w-2xl">
+        <a :href="$t('mailto')" class="external-link font-medium text-linked-700 hover:text-linked-500">{{ $t('email') }}</a>
+      </i18n>
       <!--    <p class="mt-4 text-base text-gray-500">-->
       <!--      Questions. Frequently asked ones. Plus our answers. That's how FAQs work. If you can't find what you're looking for, you can always-->
       <!--      <a href="#" class="font-medium text-linked-700 hover:text-linked-500">send us an email</a>-->
@@ -48,3 +46,32 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "title": "FAQ",
+    "description": "Questions. Frequently asked ones. Plus our answers. That's how FAQs work. If you can't find what you're looking for, you can always {link} with your enquiry.",
+    "email": "send me an email",
+    "mailto": "mailto:support@uselinked.com?subject=Question regarding linked&body=Dear linked team, could you please tell me....",
+    "questions": {
+      "free": {
+        "q": "Why is linked free?",
+        "a": "Don't worry, you are not paying with your personal data. The app is free and opensource since I like opensource software myself. You will always have full control over your data. If you want to support linked financially, you can consider sponsoring the project."
+      }
+    }
+  },
+  "de": {
+    "title": "FAQ",
+    "description": "Fragen. Häufig gestellte Fragen. Und unsere Antworten. So funktionieren die FAQs. Wenn Du nicht finden konntest, wonach Du gesucht hast, kannst Du deine Anfrage jederzeit {0} an mich senden.",
+    "email": "per E-Mail",
+    "mailto": "mailto:support@uselinked.com?subject=Frage bzgl. linked&body=Liebes linked Team, könnt ihr mir folgende Frage beantworten....",
+    "questions": {
+      "free": {
+        "q": "Why is linked free?",
+        "a": "Don't worry, you are not paying with your personal data. The app is free and opensource since I like opensource software myself. You will always have full control over your data. If you want to support linked financially, you can consider sponsoring the project."
+      }
+    }
+  }
+}
+</i18n>

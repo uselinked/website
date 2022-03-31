@@ -18,7 +18,6 @@
       <!--        </div>-->
       <!--      </template>-->
       <!--    </dl>-->
-      
       <dl class="mt-12 space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-3">
         <div v-for="(faq, index) in faqs" :key="index">
           <dt class="text-lg leading-6 font-medium text-gray-900">{{ faq.question }}</dt>

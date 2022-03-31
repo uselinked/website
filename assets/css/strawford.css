@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Strawford', sans-serif;
+  font-family: 'Strawford';
   src: url('/fonts/strawford-black-webfont.eot');
   src: url('/fonts/strawford-black-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/strawford-black-webfont.woff2') format('woff2'),
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford', sans-serif;
+  font-family: 'Strawford';
   src: url('/fonts/strawford-bold-webfont.eot');
   src: url('/fonts/strawford-bold-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/strawford-bold-webfont.woff2') format('woff2'),
@@ -21,7 +21,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford', sans-serif;
+  font-family: 'Strawford';
   src: url('/fonts/strawford-medium-webfont.eot');
   src: url('/fonts/strawford-medium-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/strawford-medium-webfont.woff2') format('woff2'),
@@ -32,7 +32,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford', sans-serif;
+  font-family: 'Strawford';
   src: url('/fonts/strawford-light-webfont.eot');
   src: url('/fonts/strawford-light-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/strawford-light-webfont.woff2') format('woff2'),
@@ -43,7 +43,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford', sans-serif;
+  font-family: 'Strawford';
   src: url('/fonts/strawford-extralight-webfont.eot');
   src: url('/fonts/strawford-extralight-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/strawford-extralight-webfont.woff2') format('woff2'),
@@ -54,7 +54,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford', sans-serif;
+  font-family: 'Strawford';
   src: url('/fonts/strawford-thin-webfont.eot');
   src: url('/fonts/strawford-thin-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/strawford-thin-webfont.woff2') format('woff2'),
@@ -65,7 +65,7 @@
 }
 
 @font-face {
-  font-family: 'Strawford', sans-serif;
+  font-family: 'Strawford';
   src: url('/fonts/strawford-regular-webfont.eot');
   src: url('/fonts/strawford-regular-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/strawford-regular-webfont.woff2') format('woff2'),

@@ -31,7 +31,6 @@
           </div>
         </div>
         <div class="-mr-2 flex sm:hidden">
-          <!-- Mobile menu button -->
           <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-linked focus:outline-none focus:ring-2 focus:ring-inset focus:ring-linked" aria-controls="mobile-menu" aria-expanded="false" @click="navOpen = !navOpen">
             <span class="sr-only">Open main menu</span>
             <svg v-if="!navOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -64,9 +63,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Mobile menu, show/hide based on menu state. -->
-
   </nav>
 </template>
 

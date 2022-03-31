@@ -1,76 +1,83 @@
 @font-face {
   font-family: 'Strawford';
-  src: url('/fonts/strawford-black-webfont.eot');
-  src: url('/fonts/strawford-black-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/strawford-black-webfont.woff2') format('woff2'),
-  url('/fonts/strawford-black-webfont.woff') format('woff'),
-  url('/fonts/strawford-black-webfont.ttf') format('truetype');
+  font-display: swap;
+  src: url('~assets/fonts/strawford-black-webfont.eot');
+  src: url('~assets/fonts/strawford-black-webfont.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/strawford-black-webfont.woff2') format('woff2'),
+  url('~assets/fonts/strawford-black-webfont.woff') format('woff'),
+  url('~assets/fonts/strawford-black-webfont.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Strawford';
-  src: url('/fonts/strawford-bold-webfont.eot');
-  src: url('/fonts/strawford-bold-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/strawford-bold-webfont.woff2') format('woff2'),
-  url('/fonts/strawford-bold-webfont.woff') format('woff'),
-  url('/fonts/strawford-bold-webfont.ttf') format('truetype');
+  font-display: swap;
+  src: url('~assets/fonts/strawford-bold-webfont.eot');
+  src: url('~assets/fonts/strawford-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/strawford-bold-webfont.woff2') format('woff2'),
+  url('~assets/fonts/strawford-bold-webfont.woff') format('woff'),
+  url('~assets/fonts/strawford-bold-webfont.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Strawford';
-  src: url('/fonts/strawford-medium-webfont.eot');
-  src: url('/fonts/strawford-medium-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/strawford-medium-webfont.woff2') format('woff2'),
-  url('/fonts/strawford-medium-webfont.woff') format('woff'),
-  url('/fonts/strawford-medium-webfont.ttf') format('truetype');
+  font-display: swap;
+  src: url('~assets/fonts/strawford-medium-webfont.eot');
+  src: url('~assets/fonts/strawford-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/strawford-medium-webfont.woff2') format('woff2'),
+  url('~assets/fonts/strawford-medium-webfont.woff') format('woff'),
+  url('~assets/fonts/strawford-medium-webfont.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Strawford';
-  src: url('/fonts/strawford-light-webfont.eot');
-  src: url('/fonts/strawford-light-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/strawford-light-webfont.woff2') format('woff2'),
-  url('/fonts/strawford-light-webfont.woff') format('woff'),
-  url('/fonts/strawford-light-webfont.ttf') format('truetype');
+  font-display: swap;
+  src: url('~assets/fonts/strawford-light-webfont.eot');
+  src: url('~assets/fonts/strawford-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/strawford-light-webfont.woff2') format('woff2'),
+  url('~assets/fonts/strawford-light-webfont.woff') format('woff'),
+  url('~assets/fonts/strawford-light-webfont.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Strawford';
-  src: url('/fonts/strawford-extralight-webfont.eot');
-  src: url('/fonts/strawford-extralight-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/strawford-extralight-webfont.woff2') format('woff2'),
-  url('/fonts/strawford-extralight-webfont.woff') format('woff'),
-  url('/fonts/strawford-extralight-webfont.ttf') format('truetype');
+  font-display: swap;
+  src: url('~assets/fonts/strawford-extralight-webfont.eot');
+  src: url('~assets/fonts/strawford-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/strawford-extralight-webfont.woff2') format('woff2'),
+  url('~assets/fonts/strawford-extralight-webfont.woff') format('woff'),
+  url('~assets/fonts/strawford-extralight-webfont.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Strawford';
-  src: url('/fonts/strawford-thin-webfont.eot');
-  src: url('/fonts/strawford-thin-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/strawford-thin-webfont.woff2') format('woff2'),
-  url('/fonts/strawford-thin-webfont.woff') format('woff'),
-  url('/fonts/strawford-thin-webfont.ttf') format('truetype');
+  font-display: swap;
+  src: url('~assets/fonts/strawford-thin-webfont.eot');
+  src: url('~assets/fonts/strawford-thin-webfont.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/strawford-thin-webfont.woff2') format('woff2'),
+  url('~assets/fonts/strawford-thin-webfont.woff') format('woff'),
+  url('~assets/fonts/strawford-thin-webfont.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Strawford';
-  src: url('/fonts/strawford-regular-webfont.eot');
-  src: url('/fonts/strawford-regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/strawford-regular-webfont.woff2') format('woff2'),
-  url('/fonts/strawford-regular-webfont.woff') format('woff'),
-  url('/fonts/strawford-regular-webfont.ttf') format('truetype');
+  font-display: swap;
+  src: url('~assets/fonts/strawford-regular-webfont.eot');
+  src: url('~assets/fonts/strawford-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/strawford-regular-webfont.woff2') format('woff2'),
+  url('~assets/fonts/strawford-regular-webfont.woff') format('woff'),
+  url('~assets/fonts/strawford-regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

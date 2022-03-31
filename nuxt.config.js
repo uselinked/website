@@ -1,14 +1,12 @@
 import axios from 'axios'
 
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   server: {
     host: '0' // default: localhost
   },
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'uselinked',
     htmlAttrs: {
@@ -52,23 +50,19 @@ export default {
     }
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/common.css',
     '@/assets/css/strawford.css',
     '@/assets/css/scrollbar.css',
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/custom-device-flags.js',
     '~/plugins/glide.js'
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
@@ -82,7 +76,6 @@ export default {
     defaultUserAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36'
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
     '@nuxt/content',
@@ -105,18 +98,13 @@ export default {
     middleware: ['fathom']
   },
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
   },
 
-  // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
+  build: {},
 
   sitemap: {
     hostname: 'https://uselinked.com',

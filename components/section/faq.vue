@@ -2,7 +2,7 @@
   <section aria-labelledby="faq-heading" class="bg-white">
     <content-wrapper>
       <h2 class="text-3xl font-extrabold text-gray-900">{{ $t('title') }}</h2>
-      <i18n path="description" tag="h2" class="text-xl tracking-tight text-gray-900 max-w-2xl">
+      <i18n path="description" tag="h2" class="mt-5 text-xl text-gray-500">
         <a :href="$t('mailto')" class="external-link font-medium text-linked-700 hover:text-linked-500">{{ $t('email') }}</a>
       </i18n>
       <!--    <p class="mt-4 text-base text-gray-500">-->

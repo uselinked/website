@@ -14,11 +14,11 @@
           <div class="flex space-x-4">
             <nuxt-link
               @click.native="trackClick('9N6TIFUD', 0)"
-              :to="localePath('donate')"
+              :to="localePath('sponsor')"
               class="hover:bg-black/5 hover:text-linked font-medium text-lg text-gray-900 space-x-3 transition-all duration-300 inline-flex items-center justify-center py-2 px-3 rounded-lg"
             >
               <icon-donate />
-              <span>Donate</span>
+              <span>Sponsor</span>
             </nuxt-link>
             <nuxt-link
               @click.native="trackClick('LCNP5VTH', 0)"
@@ -46,11 +46,11 @@
         <div class="pl-0 px-2 pt-2 pb-3 space-y-2">
           <nuxt-link
             @click.native="trackClick('9N6TIFUD', 0)"
-            :to="localePath('donate')"
+            :to="localePath('sponsor')"
             class="hover:bg-black/5 hover:text-linked font-medium text-lg text-gray-900 space-x-3 transition-all duration-300 inline-flex items-center pl-0 py-2 px-3 rounded-lg w-full"
           >
             <icon-donate />
-            <span>Donate</span>
+            <span>Sponsor</span>
           </nuxt-link>
           <nuxt-link
             @click.native="trackClick('LCNP5VTH', 0)"

@@ -93,7 +93,7 @@ export default {
         support: [ 'community', 'faq', 'guides', 'media' ],
         legal: [ 'legal', 'privacy', 'terms', 'license' ],
         contribution: [
-          { route:'donate', code: 'WPSZXYCR' },
+          { route:'sponsor', code: 'WPSZXYCR' },
           'feedback',
           'translations',
           'development'
@@ -133,7 +133,7 @@ export default {
       "privacy": "privacy",
       "terms": "terms",
       "license": "license",
-      "donate": "donate",
+      "sponsor": "sponsor",
       "translations": "translations",
       "feedback": "feedback",
       "changelog": "changelog",
@@ -164,7 +164,7 @@ export default {
       "privacy": "Datenschutz",
       "terms": "Bedingungen",
       "license": "lizenz",
-      "donate": "spenden",
+      "sponsor": "spenden",
       "translations": "übersetzungen",
       "feedback": "feedback",
       "changelog": "änderungen",

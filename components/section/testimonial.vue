@@ -31,7 +31,7 @@
                     rel="noreferrer noopener"
                     :aria-label="`Visit ${testimonial.name} on twitter`"
                   >
-                    <icon-twitter class="text-blue-400 hover:text-blue-700" />
+                    <icon-twitter class="h-6 w-6 text-blue-400 hover:text-blue-700" />
                   </a>
                 </div>
               </div>

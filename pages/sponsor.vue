@@ -16,7 +16,7 @@
           <p class="mt-8 text-xl text-gray-500 leading-8">{{ $t('sponsoring') }}</p>
           <p class="mt-8 text-xl text-gray-500 leading-8">{{ $t('access') }}</p>
         </div>
-        <div class="text-lg max-w-prose mx-auto flex space-x-4 mt-8">
+        <div class="text-lg max-w-prose mx-auto block md:flex space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-8">
           <a
             href="https://github.com/sponsors/lostdesign"
             class="text-lg flex-1 flex items-center justify-center px-5 py-3 border border-transparent shadow font-medium rounded-md text-white bg-linked-500 hover:bg-linked-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-linked-700 focus:ring-white mt-6 lg:mt-0 sm:flex-shrink-0"

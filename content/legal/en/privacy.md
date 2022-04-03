@@ -30,12 +30,6 @@ The data will be deleted as soon as the purpose of the processing ceases to appl
 
 GitHub has implemented compliance measures for international data transfers. These apply to all global activities where GitHub processes personal data of individuals in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs). For more information, please visit: [GitHub Data Protection Addendum](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors).
 
-**Legal Notice**
-
-In principle, an order processing contract must be concluded with the hoster. The Bavarian State Office for Data Protection Supervision has made an exception for the hosting of purely static websites. In the event that the website is used for self-expression, e.g. by associations or small businesses, no personal data flows to the operator and no tracking takes place, there is no commissioned processing.
-
-It goes on to say that "the fact that IP addresses, i.e. personal data, must inevitably be processed even when hosting static websites does not lead to the assumption of commissioned processing. That would not be appropriate. Rather, the (short-term) IP address storage is still attributable to the website hoster's telecommunications access provision under the TKG and primarily serves the hoster's security purposes." ([FAQ Hosting keine Auftragsverarbeitung](https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf)) It should therefore be checked whether the hoster provides tracking and evaluation tools and whether and how long log files are kept.
-
 ## Cloudflare
 We use the Content Delivery Network (CDN) of
 

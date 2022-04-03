@@ -142,22 +142,22 @@ export default {
       "de": "German"
     },
     "link": {
-      "about": "🚧 about",
-      "blog": "🚧 blog",
-      "roadmap": "🚧 roadmap",
-      "community": "community",
-      "guides": "🚧 guides",
-      "faq": "faq",
-      "privacy": "🚧 privacy",
-      "terms": "🚧 terms",
-      "license": "license",
-      "sponsor": "sponsor",
-      "translations": "🚧 translations",
-      "feedback": "🚧 feedback",
-      "changelog": "changelog",
-      "legal": "🚧 legal",
-      "media": "🚧 media",
-      "development": "🚧 development"
+      "about": "🚧 About",
+      "blog": "🚧 Blog",
+      "roadmap": "🚧 Roadmap",
+      "community": "Community",
+      "guides": "🚧 Guides",
+      "faq": "FAQ",
+      "privacy": "🚧 Privacy",
+      "terms": "🚧 Terms",
+      "license": "License",
+      "sponsor": "Sponsor",
+      "translations": "🚧 Translations",
+      "feedback": "🚧 Feedback",
+      "changelog": "Changelog",
+      "legal": "🚧 Legal",
+      "media": "🚧 Media",
+      "development": "🚧 Development"
     }
   },
   "de": {
@@ -173,22 +173,22 @@ export default {
       "de": "Deutsch"
     },
     "link": {
-      "about": "🚧 über",
-      "blog": "🚧 blog",
-      "roadmap": "🚧 roadmap",
-      "community": "community",
+      "about": "🚧 Über",
+      "blog": "🚧 Blog",
+      "roadmap": "🚧 Roadmap",
+      "community": "Community",
       "guides": "🚧 Handbuch",
       "faq": "FAQ",
       "privacy": "🚧 Datenschutz",
       "terms": "🚧 Bedingungen",
-      "license": "lizenz",
-      "sponsor": "spenden",
-      "translations": "🚧 übersetzungen",
+      "license": "Lizenz",
+      "sponsor": "Sponsor",
+      "translations": "🚧 Übersetzungen",
       "feedback": "🚧 feedback",
-      "changelog": "änderungen",
-      "legal": "🚧 impressum",
-      "media": "🚧 medien",
-      "development": "🚧 entwicklung"
+      "changelog": "Änderungen",
+      "legal": "🚧 Impressum",
+      "media": "🚧 Medien",
+      "development": "🚧 Entwicklung"
     }
   }
 }

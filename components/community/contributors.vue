@@ -49,7 +49,7 @@ export default {
 <i18n>
 {
   "en": {
-    "lovely_contributors": "The lovely contributors",
+    "lovely_contributors": "Contributors",
     "thanks": "Thanks to the awesome people that have contributed to linked."
   },
   "de": {

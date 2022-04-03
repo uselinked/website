@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/download/0.2.1", {data:[{release:null,error:{error:true,resettingIn:"in 23 minutes",message:"You've exceeded the request count for the Github API, please retry in 23 minutes."},fallbackUrl:"https:\u002F\u002Fgithub.com\u002Flostdesign\u002Flinked\u002Freleases\u002Ftags\u002Fv0.2.1"}],fetch:{},mutations:void 0});

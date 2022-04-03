@@ -9,7 +9,7 @@
 export default {
   async asyncData({ $content, app }) {
     return {
-      page: await $content(`${app.i18n.locale}/legal`).fetch()
+      page: await $content(`/legal/${app.i18n.locale}/legal`).fetch()
     }
   }
 }

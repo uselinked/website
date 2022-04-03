@@ -1,6 +1,6 @@
 <template>
-  <nav class="bg-white mt-4">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+  <content-wrapper>
+    <nav class="bg-white mt-4">
       <div class="flex items-center justify-between h-20">
         <div class="flex items-center">
           <div class="flex-shrink-0">
@@ -62,8 +62,8 @@
           </nuxt-link>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </content-wrapper>
 </template>
 
 <script>

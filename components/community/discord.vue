@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 py-6 bg-linked-700 rounded-lg md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center mb-12 justify-center items-center">
+  <div class="px-6 py-6 bg-linked-700 rounded-lg md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center mb-12 justify-center items-center space-x-0 md:space-x-6">
     <div class="xl:w-0 xl:flex-1">
       <h2 class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
         {{  $t('title') }}

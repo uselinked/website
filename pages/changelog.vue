@@ -1,39 +1,46 @@
 <template>
   <content-wrapper class="pt-16">
     <page-heading title="Changelog"/>
-    <template v-if="releaseList" v-for="release in releaseList">
-      <div v-if="!release.draft" class="mb-6 md:mb-12 bg-gray-50 border-gray-200 border-2 px-6 md:px-8 pb-8 rounded-lg" :key="release.id">
-        <header class="block md:flex justify-between items-center">
-          <h2 class="text-md mb-4 mt-8">
-            <nuxt-link :to="localePath(`/download/${release.name}`)" class="flex flex-col">
-              <span class="text-3xl font-bold rounded-lg text-bright-pink"> {{ release.name }}</span>
-              <span class="text-sm font-regular">{{ getLocaleDate(release.published_at) }}</span>
-            </nuxt-link>
-          </h2>
-          <nav class="flex justify-between md:justify-center items-center space-x-6 my-6 md:my-0">
-            <nuxt-link :to="localePath(`/download/${release.name}`)" class="flex justify-center items-center space-x-2 link-hover">
-              <download-icon class="w-5 h-5"/>
-              <span>Download</span>
-            </nuxt-link>
-            <goto-github :page="`https://github.com/lostdesign/linked/releases/${release.tag}`"/>
-          </nav>
-        </header>
-        <article class="prose prose-sm md:prose-base" style="max-width:100%!important" v-html="release.body"></article>
-      </div>
-    </template>
+    <div class="flow-root mt-12">
+      <ul role="list" class="-mb-8">
+        <template v-if="releaseList" v-for="(release, index) in releaseList">
+          <li :key="index">
+            <div class="relative pb-8">
+              <span v-if="releaseList.length-1 !== index" class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 hidden md:block" aria-hidden="true"></span>
+              <div class="relative flex space-x-0 md:space-x-3">
+                <icon-github class="h-8 w-8 rounded-full bg-linked 400 flex items-center justify-center ring-8 ring-white text-white hidden md:block" />
+                <div class="min-w-0 flex-1 block md:flex justify-between space-x-0 md:space-x-4">
+                  <div>
+                    <p class="text-3xl font-bold text-gray-900">{{ release.name }}</p>
+                    <div class="text-lg font-regular whitespace-nowrap text-gray-500 block md:hidden">
+                      <time :datetime="getLocaleDate(release.published_at)">{{ getLocaleDate(release.published_at) }}</time>
+                    </div>
+                    <article class="mt-4 mb-6 prose prose-sm md:prose-base" style="max-width:100%!important" v-html="release.body"></article>
+                  </div>
+                  <div class="text-lg font-regular text-right whitespace-nowrap text-gray-500 hidden md:block">
+                    <time :datetime="getLocaleDate(release.published_at)">{{ getLocaleDate(release.published_at) }}</time>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </template>
+      </ul>
+    </div>
     <github-error :error="error"/>
   </content-wrapper>
 </template>
 
 <script>
-import DownloadIcon from '@/assets/svg/download.svg?inline=true'
+import IconDownload from '@/assets/svg/download.svg?inline=true'
+import IconGithub from '@/assets/svg/logos/github.svg?inline=true'
 import { checkRateLimit } from '@/lib/github'
 import { DateTime } from 'luxon'
 import { marked } from 'marked'
 
 
 export default {
-  components: { DownloadIcon },
+  components: { IconDownload, IconGithub },
   async asyncData() {
     let error = null
 
@@ -75,7 +82,7 @@ export default {
       return DateTime
         .fromISO(date)
         .setLocale(this.$i18n.locale)
-        .toLocaleString({day: 'numeric', month: 'long', year: 'numeric'})
+        .toLocaleString({day: '2-digit', month: 'short', year: '2-digit'})
     }
   }
 }

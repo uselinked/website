@@ -11,7 +11,16 @@
                 <icon-github class="h-8 w-8 rounded-full bg-linked 400 flex items-center justify-center ring-8 ring-white text-white hidden md:block" />
                 <div class="min-w-0 flex-1 block md:flex justify-between space-x-0 md:space-x-4">
                   <div>
-                    <p class="text-3xl font-bold text-gray-900">{{ release.name }}</p>
+                    <div class="flex flex-col sm:flex-row space-x-0 sm:space-x-8 space-y-3 sm:space-y-0 mb-2 sm:mb-0">
+                      <nuxt-link :to="localePath(`/download/${release.name}`)" class="link-hover">
+                        <span class="text-3xl font-bold text-gray-900">{{ release.name }}</span>
+                      </nuxt-link>
+                      <nuxt-link :to="localePath(`/download/${release.name}`)" class="flex items-center space-x-2 link-hover">
+                        <icon-download class="w-5 h-5"/>
+                        <span>Download</span>
+                      </nuxt-link>
+                      <goto-github :page="`https://github.com/lostdesign/linked/releases/${release.tag}`"/>
+                    </div>
                     <div class="text-lg font-regular whitespace-nowrap text-gray-500 block md:hidden">
                       <time :datetime="getLocaleDate(release.published_at)">{{ getLocaleDate(release.published_at) }}</time>
                     </div>

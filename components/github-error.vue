@@ -20,7 +20,7 @@ export default {
   methods: {
     getLocaleDate(date) {
       return DateTime
-        .fromSeconds(date)
+        .fromSeconds(Number(date))
         .toRelative({ locale: this.$i18n.locale })
     }
   }

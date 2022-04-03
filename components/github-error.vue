@@ -2,7 +2,7 @@
   <div v-if="$props.error" class="bg-linked-600 text-white p-12 mt-12">
     <h1 class="text-6xl font-black mb-4 block">Oops.</h1>
     <i18n path="limit" tag="p" class="mb-8 text-2xl">
-      {{ getLocaleDate($props.error.resettingIn) }}
+      {{ $props.error.resettingIn }}
     </i18n>
   </div>
 </template>
@@ -17,13 +17,6 @@ export default {
       default: () => {}
     }
   },
-  methods: {
-    getLocaleDate(date) {
-      return DateTime
-        .fromSeconds(Number(date))
-        .toRelative({ locale: this.$i18n.locale })
-    }
-  }
 }
 </script>
 

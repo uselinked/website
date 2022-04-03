@@ -1,11 +1,12 @@
 <template>
-  <div class="px-6 py-6 bg-linked-700 rounded-lg md:p-12 lg:flex xl:items-center mb-12 justify-between items-center space-x-0 lg:space-x-6">
+  <div
+    class="px-6 py-6 bg-linked-700 rounded-lg md:p-12 lg:flex xl:items-center mb-12 justify-between items-center space-x-0 lg:space-x-6">
     <div class="xl:w-0 xl:flex-1">
       <h2 class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
-        {{  $t('title') }}
+        {{ $t('title') }}
       </h2>
       <p class="mt-3 w-full lg:max-w-2xl text-lg leading-6 text-linked-200">
-        {{  $t('description') }}
+        {{ $t('description') }}
       </p>
     </div>
     <div>
@@ -14,8 +15,8 @@
         class="text-lg w-full flex items-center justify-center px-5 py-3 border border-transparent shadow font-medium rounded-md text-white bg-linked-500 hover:bg-linked-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-linked-700 focus:ring-white mt-6 lg:mt-0 sm:flex-shrink-0"
         @click.native="trackClick('M6KCBDQG', 0)"
       >
-        <icon-discord class="w-6 h-6 mr-4" />
-        {{  $t('say_hello') }}
+        <icon-discord class="w-6 h-6 mr-4"/>
+        {{ $t('say_hello') }}
       </a>
     </div>
   </div>
@@ -25,7 +26,7 @@
 import IconDiscord from '@/assets/svg/logos/discord.svg?inline=true'
 
 export default {
-  components: { IconDiscord },
+  components: {IconDiscord},
   methods: {
     trackClick(goal) {
       if (process.client) {

@@ -105,8 +105,8 @@ export default {
           //'media'
         ],
         legal: [
-          //'legal',
-          //'privacy',
+          'legal',
+          'privacy',
           //'terms',
           'license'
         ],
@@ -148,14 +148,14 @@ export default {
       "community": "Community",
       "guides": "🚧 Guides",
       "faq": "FAQ",
-      "privacy": "🚧 Privacy",
+      "privacy": "Privacy",
       "terms": "🚧 Terms",
       "license": "License",
       "sponsor": "Sponsor",
       "translations": "🚧 Translations",
       "feedback": "🚧 Feedback",
       "changelog": "Changelog",
-      "legal": "🚧 Legal",
+      "legal": "Legal",
       "media": "🚧 Media",
       "development": "🚧 Development"
     }
@@ -179,14 +179,14 @@ export default {
       "community": "Community",
       "guides": "🚧 Handbuch",
       "faq": "FAQ",
-      "privacy": "🚧 Datenschutz",
+      "privacy": "Datenschutz",
       "terms": "🚧 Bedingungen",
       "license": "Lizenz",
       "sponsor": "Sponsor",
       "translations": "🚧 Übersetzungen",
       "feedback": "🚧 feedback",
       "changelog": "Änderungen",
-      "legal": "🚧 Impressum",
+      "legal": "Impressum",
       "media": "🚧 Medien",
       "development": "🚧 Entwicklung"
     }

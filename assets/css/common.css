@@ -7,7 +7,7 @@ section {
 }
 
 .link-hover-inverted {
-  @apply hover:text-gray-900 underline underline-offset-2 decoration-gray-900 decoration-4 transition-all duration-200;
+  @apply hover:text-gray-900 underline underline-offset-2 decoration-linked-700 decoration-4 transition-all duration-200;
 }
 
 .link-hover {

@@ -1,6 +1,6 @@
 <template>
   <content-wrapper class="pt-16">
-    <page-heading title="License" />
+    <page-heading :title="$t('title')" />
     <div class="space-y-4 font-mono max-w-xl">
       <h2 class="text-xl font-bold">GNU GENERAL PUBLIC LICENSE</h2>
       <p>Version 3, 29 June 2007</p>
@@ -296,3 +296,14 @@
     </div>
   </content-wrapper>
 </template>
+
+<i18n>
+{
+  "en": {
+    "title": "License"
+  },
+  "de": {
+    "title": "Lizenz"
+  }
+}
+</i18n>

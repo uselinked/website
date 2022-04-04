@@ -5,7 +5,7 @@
       <h2 class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
         {{ $t('title') }}
       </h2>
-      <p class="mt-3 w-full lg:max-w-2xl text-lg leading-6 text-linked-200">
+      <p class="mt-3 w-full lg:max-w-2xl text-lg leading-6 text-linked-100">
         {{ $t('description') }}
       </p>
     </div>

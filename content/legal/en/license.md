@@ -1,5 +1,5 @@
 ---
-title: Lizenz
+title: License
 ---
 
 

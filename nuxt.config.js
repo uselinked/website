@@ -24,6 +24,16 @@ export default {
       { name: 'msapplication-TileColor', content: '#ff005c' },
       { name: 'theme-color', content: '#ff005c'},
       {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Get linked and start journaling 📚'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Daily journaling, without distraction! An easy, distraction-free way to record your thoughts, declutter your mind and keep the things you want to remember.'
+      },
+      {
         hid: 'og:image',
         property: 'og:image',
         content: 'https://uselinked.com/images/logo.png',
@@ -46,7 +56,7 @@ export default {
       {
         hid: 'twitter:description',
         property: 'twitter:description',
-        content: 'An easy, distraction-free way to record your thoughts, declutter your mind and keep the things you want to remember.',
+        content: 'Daily journaling, without distraction! An easy, distraction-free way to record your thoughts, declutter your mind and keep the things you want to remember.',
       },
     ],
     link: [

@@ -82,6 +82,7 @@ export default {
     trackClick(goal) {
       if (process.client) {
         this.$fathom.trackGoal(goal, 0)
+        this.navOpen = false
       }
     }
   }

@@ -1,7 +1,6 @@
 <template>
   <content-wrapper class="pt-16">
     <community-discord />
-    <community-cards />
     <community-contributors :contributors="contributors" :error="error" />
   </content-wrapper>
 </template>

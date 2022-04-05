@@ -26,7 +26,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://new.uselinked.com/images/logo.png',
+        content: 'https://uselinked.com/images/logo.png',
       },
     ],
     link: [
@@ -112,7 +112,7 @@ export default {
   },
 
   i18n: {
-    baseUrl: 'https://new.uselinked.com',
+    baseUrl: 'https://uselinked.com',
     vueI18nLoader: true,
     defaultLocale: 'en',
     locales: [

@@ -20,7 +20,7 @@
             <footer class="mt-8">
               <div class="md:flex md:items-center md:justify-center">
                 <div class="md:flex-shrink-0">
-                  <img class="mx-auto h-10 w-10 rounded-full" :src="testimonial.image" alt="" loading=lazy>
+                  <img class="mx-auto h-10 w-10 rounded-full" :src="`/images/testimonials/${testimonial.image}`" alt="" loading=lazy>
                 </div>
                 <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
                   <div class="text-base font-medium text-gray-900">{{ testimonial.name }}</div>
@@ -57,25 +57,25 @@ export default {
           name: 'Rama Adi Nugraha',
           twitter: 'https://twitter.com/its_ramaadi',
           translationKey: 'rama',
-          image: 'https://pbs.twimg.com/profile_images/1312050517078470656/Ln2AgW5k_400x400.png'
+          image: 'rama.png'
         },
         {
           name: 'Richard',
           twitter: 'https://twitter.com/richardevcom',
           translationKey: 'richard',
-          image: 'https://pbs.twimg.com/profile_images/1416475956022325258/4yonnJYj_400x400.jpg'
+          image: 'richard.jpeg'
         },
         {
           name: 'Sebastian',
           twitter: 'https://twitter.com/T0TProduction',
           translationKey: 'sebastian',
-          image: 'https://raw.githubusercontent.com/T0TProduction/diluz.io/deploy/assets/images/profile/sebastian/pp.png'
+          image: 'sebastian.jpeg'
         },
         {
           name: 'Josiah Rose',
           twitter: 'https://twitter.com/_josiahrose',
           translationKey: 'josiah',
-          image: 'https://pbs.twimg.com/profile_images/1495911592420155395/y6ZU7Mca_400x400.jpg'
+          image: 'josiah.jpeg'
         }
       ]
     }

@@ -17,6 +17,28 @@ export default {
       error,
       fallbackUrl,
     }
+  },
+  head() {
+    return {
+      title: `Get linked ${this.release.tag_name}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `Download linked for your operating system, for free ✨`
+        },
+        {
+          hid: 'article:published_time',
+          name: 'article:published_time',
+          content: this.release.published_at
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://uselinked.com/download'
+        }
+      ]
+    }
   }
 }
 </script>

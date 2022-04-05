@@ -8,7 +8,7 @@ export default {
   },
 
   head: {
-    title: 'uselinked',
+    title: 'Get linked and start journaling 📚',
     htmlAttrs: {
       lang: 'en'
     },
@@ -27,6 +27,26 @@ export default {
         hid: 'og:image',
         property: 'og:image',
         content: 'https://uselinked.com/images/logo.png',
+      },
+      {
+        hid: 'twitter:image',
+        property: 'twitter:image',
+        content: 'https://uselinked.com/images/logo.png',
+      },
+      {
+        hid: 'twitter:card',
+        property: 'twitter:card',
+        content: 'summary',
+      },
+      {
+        hid: 'twitter:site',
+        property: 'twitter:site',
+        content: '@uselinked',
+      },
+      {
+        hid: 'twitter:description',
+        property: 'twitter:description',
+        content: 'An easy, distraction-free way to record your thoughts, declutter your mind and keep the things you want to remember.',
       },
     ],
     link: [

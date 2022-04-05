@@ -51,6 +51,23 @@ export default {
         this.$fathom.trackGoal(goal, 0)
       }
     }
+  },
+  head() {
+    return {
+      title: `Support linked 💖`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `linked is completely free and opensource, support its future by sponsoring!`
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://uselinked.com/sponsor'
+        }
+      ]
+    }
   }
 }
 </script>

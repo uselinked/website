@@ -76,7 +76,7 @@ export default {
   "en": {
     "maintainer": {
       "title": "Maintainer",
-      "subline": "The people behind the project."
+      "subline": "The head behind the project."
     },
     "lovely_contributors": "Contributors",
     "thanks": "Thanks to the awesome people that have contributed to linked."
@@ -84,7 +84,7 @@ export default {
   "de": {
     "maintainer": {
       "title": "Maintainer",
-      "subline": "Die Menschen hinter dem Projekt."
+      "subline": "Der Kopf hinter dem Projekt."
     },
     "lovely_contributors": "Mitwirkende",
     "thanks": "Vielen Dank an alle, die zu linked beigetragen haben."

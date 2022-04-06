@@ -19,14 +19,13 @@
         <component :is="getCtaSvg" class="hidden md:block opacity-75" />
       </div>
     </div>
-      <img
-        src="/images/linked-app.png"
-        alt="screenshot of linked"
-        class="mx-auto w-full md:w-1/2"
-        loading=lazy
-        width="1164"
-        height="1776"
-      />
+    <img
+      src="/images/linked-app.png"
+      alt="screenshot of linked"
+      class="mx-auto w-full md:w-1/2 h-auto"
+      width="1164"
+      height="1776"
+    />
   </content-wrapper>
 </template>
 

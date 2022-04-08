@@ -28,6 +28,7 @@
                     v-if="testimonial.social"
                     class="inline-block"
                     :href="testimonial.social"
+                    target="_blank"
                     rel="noreferrer noopener"
                     :aria-label="`Visit ${testimonial.name} on twitter`"
                   >
@@ -100,6 +101,13 @@ export default {
           translationKey: 'taep',
           image: 'taep.jpeg',
           icon: IconGithub
+        },
+        {
+          name: 'Techy Dev',
+          social: 'https://github.com/TechyDev1961',
+          translationKey: 'techy',
+          image: 'techy.png',
+          icon: IconGithub
         }
       ]
     }
@@ -135,14 +143,16 @@ export default {
     "richard": "Finally no more countless and forever lost .txt files on my workstation. Linked is perfect solution for everything in between countless todo notes and digital journals.",
     "sebastian": "I use linked at work daily! It's just so convenient for taking quick notes. What I especially like is that everything is stored locally - No need to think about data confidentiality.",
     "josiah": "I use linked because it helps me effectively manage, track and organize my daily events. It's special because it has a minimalist design while maintaining it's beneficial features and time management.",
-    "taep": "linked is pog!"
+    "taep": "linked is pog!",
+    "techy": "linked made me incorporate this good habit of jotting down my experiences for the day and making my day more efficient and organized because of how simple it is to start journaling with it. It has helped me manage multiple tasks!"
   },
   "de": {
     "rama": "Ich finde es toll, wie einfach und unkompliziert linked ist. In dem Moment, in dem man die App öffnet, kann man ohne viel Aufwand mit dem Notieren beginnen. Journaling war noch nie so einfach!",
     "richard": "Endlich keine unzähligen und für immer verlorenen .txt-Dateien mehr auf meinem Computer. linked ist die perfekte Lösung für alles, was zwischen unzähligen ToDo-Notizen und digitalen Journalen liegt.",
     "sebastian": "Ich verwende linked täglich bei der Arbeit! Es ist einfach so praktisch, um schnelle Notizen zu machen. Besonders gut gefällt mir, dass alles lokal gespeichert wird - man muss sich keine Gedanken über die Vertraulichkeit der Daten machen.",
     "josiah": "Ich verwende linked, weil es mir hilft, meine täglichen Ereignisse effektiv zu verwalten, zu verfolgen und zu organisieren. Es ist etwas Besonderes, weil es ein minimalistisches Design hat, während es seine nützlichen Funktionen und Zeitmanagement beibehält.",
-    "taep": "linked is pog!"
+    "taep": "linked is pog!",
+    "techy": "linked hat mich dazu gebracht, meine Erlebnisse des Tages aufzuschreiben und meinen Tag effizienter und organisierter zu gestalten, weil es so einfach ist. Es hat mir geholfen, mehrere Aufgaben zu bewältigen!"
   }
 }
 </i18n>

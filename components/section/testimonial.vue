@@ -37,14 +37,6 @@
                       :class="getIconClasses(testimonial.social)"
                       class="h-6 w-6"
                     />
-<!--                    <icon-github-->
-<!--                      v-if="testimonial.icon == 'github'"-->
-<!--                      class="h-6 w-6 text-gray-900 hover:text-gray-700"-->
-<!--                    />-->
-<!--                    <icon-twitter-->
-<!--                      v-if="testimonial.icon == 'twitter'"-->
-<!--                      class="h-6 w-6 text-blue-400 hover:text-blue-700"-->
-<!--                    />-->
                   </a>
                 </div>
               </div>

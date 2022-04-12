@@ -9,11 +9,15 @@
 import {checkRateLimit} from '@/lib/github'
 
 export default {
-  async asyncData() {
+  async asyncData({ $config: { githubToken }}) {
     let error = null
 
     try {
-      const response = await fetch('https://api.github.com/repos/lostdesign/linked/contributors')
+      const response = await fetch('https://api.github.com/repos/lostdesign/linked/contributors', {
+        headers: {
+          Authorization: 'Bearer ' + githubToken
+        }
+      })
       const isRateLimited = checkRateLimit(response)
 
       if (isRateLimited.error) {

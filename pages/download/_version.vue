@@ -9,8 +9,8 @@
 import { fetchRelease } from '@/lib/github'
 
 export default {
-  async asyncData({ route }) {
-    const { release, error, fallbackUrl} = await fetchRelease(route.params.version)
+  async asyncData({ route, $config: { githubToken } }) {
+    const { release, error, fallbackUrl} = await fetchRelease(githubToken, route.params.version)
 
     return {
       release,

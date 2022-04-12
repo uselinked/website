@@ -50,11 +50,15 @@ import { marked } from 'marked'
 
 export default {
   components: { IconDownload, IconGithub },
-  async asyncData() {
+  async asyncData({ $config: { githubToken }}) {
     let error = null
 
     try {
-      const response = await fetch('https://api.github.com/repos/lostdesign/linked/releases?per_page=100')
+      const response = await fetch('https://api.github.com/repos/lostdesign/linked/releases?per_page=100', {
+        headers: {
+          Authorization: 'Bearer ' + githubToken
+        }
+      })
       const isRateLimited = checkRateLimit(response)
 
       if (isRateLimited.error) {

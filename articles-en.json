@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "linkeds Artikel",
+    "home_page_url": "https://uselinked.com/articles-de.json",
+    "description": "Alles über die Entwicklung und Neuigkeiten von linked.",
+    "items": [
+        {
+            "id": "https://uselinked.com/articles/the-beginning",
+            "content_html": "\nLearn more shortly.\n",
+            "url": "https://uselinked.com/articles/the-beginning",
+            "title": "Der Anfang",
+            "summary": "Wie linked entstanden ist.",
+            "date_published": "2022-04-12T19:35:57.250Z",
+            "author": {
+                "name": "Andre Weller"
+            }
+        }
+    ]
+}

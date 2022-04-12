@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/articles", {data:[{posts:[{slug:"the-beginning",title:"The story of linked",readingTime:900,readingWords:3,readingMinutes:.015}]}],fetch:{},mutations:void 0});

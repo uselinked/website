@@ -45,6 +45,16 @@ export default {
       title: 'Get linked and start journaling 📚',
       meta: [
         {
+          hid: 'og:url',
+          property: 'og:url',
+          value: 'https://uselinked.com'
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website'
+        },
+        {
           hid: 'description',
           name: 'description',
           content: 'An easy, distraction-free way to record your thoughts, declutter your mind and keep the things you want to remember.'

@@ -4,14 +4,14 @@
         <title>linkeds articles</title>
         <link>https://uselinked.com/articles-en.xml</link>
         <description>Everything about the development and news of linked.</description>
-        <lastBuildDate>Tue, 12 Apr 2022 19:51:16 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 12 Apr 2022 19:53:13 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
             <title><![CDATA[The story of linked]]></title>
             <link>https://uselinked.com/articles/the-beginning</link>
             <guid>https://uselinked.com/articles/the-beginning</guid>
-            <pubDate>Tue, 12 Apr 2022 19:50:12 GMT</pubDate>
+            <pubDate>Tue, 12 Apr 2022 19:52:27 GMT</pubDate>
             <description><![CDATA[Why linked exists, who made it and what is to be expected.]]></description>
             <content:encoded><![CDATA[
 Learn more shortly.

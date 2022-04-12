@@ -1,23 +1,23 @@
 <template>
   <main>
-    <section-hero class="pt-16" />
-    <section-testimonial />
-    <section-features />
-    <section-research />
-    <section-start-journaling :assets="assets" />
-    <section-faq />
+    <section-hero class="pt-16"/>
+    <section-testimonial/>
+    <section-features/>
+    <section-research/>
+    <section-start-journaling :assets="assets"/>
+    <section-faq/>
   </main>
 </template>
 
 <script>
 import ItsFree from '@/assets/svg/its-free.svg?inline'
-import { fetchRelease } from '@/lib/github'
+import {fetchRelease} from '@/lib/github'
 
 export default {
   name: 'IndexPage',
-  components: { ItsFree },
-  async asyncData({ $config: { githubToken }}) {
-    const { release, error, fallbackUrl} = await fetchRelease(githubToken)
+  components: {ItsFree},
+  async asyncData({$config: {githubToken}}) {
+    const {release, error, fallbackUrl} = await fetchRelease(githubToken)
 
     let assets
 
@@ -26,10 +26,10 @@ export default {
         windows: release.assets
           .filter(asset => asset.name.includes('Setup'))
           .filter(asset => !asset.name.includes('blockmap')),
-          macos: release.assets
+        macos: release.assets
           .filter(asset => asset.name.includes('dmg'))
           .filter(asset => !asset.name.includes('blockmap')),
-          linux: release.assets
+        linux: release.assets
           .filter(asset => asset.name.includes('AppImage'))
       }
     }
@@ -77,12 +77,12 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: 'https://uselinked.com/images/logo.png',
+          content: 'https://uselinked.com/images/linked-banner.jpg'
         },
         {
           hid: 'og:image:alt',
           property: 'og:image:alt',
-          content: 'The logo of linked',
+          content: 'Preview image of linked.'
         },
         {
           hid: 'twitter:image',

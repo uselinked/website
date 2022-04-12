@@ -80,6 +80,11 @@ export default {
           content: 'https://uselinked.com/images/logo.png',
         },
         {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: 'The logo of linked',
+        },
+        {
           hid: 'twitter:image',
           property: 'twitter:image',
           content: 'https://uselinked.com/images/logo.png',

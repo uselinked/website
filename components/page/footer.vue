@@ -94,7 +94,7 @@ export default {
       links: {
         project: [
           //'about',
-          //'blog',
+          //'articles',
           //'roadmap',
           'changelog'
         ],
@@ -143,7 +143,7 @@ export default {
     },
     "link": {
       "about": "🚧 About",
-      "blog": "🚧 Blog",
+      "articles": "🚧 Articles",
       "roadmap": "🚧 Roadmap",
       "community": "Community",
       "guides": "🚧 Guides",
@@ -174,7 +174,7 @@ export default {
     },
     "link": {
       "about": "🚧 Über",
-      "blog": "🚧 Blog",
+      "articles": "🚧 Artikel",
       "roadmap": "🚧 Roadmap",
       "community": "Community",
       "guides": "🚧 Handbuch",

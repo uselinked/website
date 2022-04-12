@@ -1,5 +1,36 @@
 import axios from 'axios'
 
+const create = async (feed, args) => {
+  const [ feedType, source, language, title, description ] = args;
+  const { $content } = require('@nuxt/content')
+  const posts = await $content(`${source}/${language}`).sortBy('date', 'desc').fetch()
+
+  feed.options = {
+    title,
+    description,
+    link: `https://uselinked.com/${source}-${language}.${feedType}`,
+  }
+
+  posts.forEach(post => {
+    feed.addItem({
+      title: post.title,
+      link: `https://uselinked.com/${source}/${post.slug}`,
+      id: `https://uselinked.com/${source}/${post.slug}`,
+      description: post.description,
+      content: post.bodyPlainText,
+      published: new Date(post.createdAt),
+      author: [
+        {
+          name: 'Andre Weller',
+          email: 'social@uselinked.com',
+        },
+      ],
+    })
+  })
+
+  return feed
+}
+
 export default {
   target: 'static',
 
@@ -8,56 +39,32 @@ export default {
   },
 
   head: {
-    title: 'Get linked and start journaling 📚',
-    htmlAttrs: {
-      lang: 'en'
-    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'An easy, distraction-free way to record your thoughts, declutter your mind and keep the things you want to remember.'
-      },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'msapplication-TileColor', content: '#ff005c' },
       { name: 'theme-color', content: '#ff005c'},
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'Get linked and start journaling 📚'
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: 'Daily journaling, without distraction! An easy, distraction-free way to record your thoughts, declutter your mind and keep the things you want to remember.'
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://uselinked.com/images/logo.png',
-      },
-      {
-        hid: 'twitter:image',
-        property: 'twitter:image',
-        content: 'https://uselinked.com/images/logo.png',
-      },
-      {
-        hid: 'twitter:card',
-        property: 'twitter:card',
-        content: 'summary',
-      },
       {
         hid: 'twitter:site',
         property: 'twitter:site',
         content: '@uselinked',
       },
       {
-        hid: 'twitter:description',
-        property: 'twitter:description',
-        content: 'Daily journaling, without distraction! An easy, distraction-free way to record your thoughts, declutter your mind and keep the things you want to remember.',
+        hid: 'twitter:creator',
+        property: 'twitter:creator',
+        content: '@uselinked',
       },
+      {
+        hid: 'og:email',
+        property: 'og:email',
+        content: 'social@uselinked.com',
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'uselinked',
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -70,13 +77,25 @@ export default {
     ]
   },
 
+  privateRuntimeConfig: {
+    githubToken: process.env.GITHUB_TOKEN
+  },
+
   generate: {
     routes() {
-      return axios.get('https://api.github.com/repos/lostdesign/linked/releases?per_page=100').then(res => {
-        return res.data.map(download=> {
-          return '/download/' + download.name
-        })
+      return axios({
+        method: 'GET',
+        url: 'https://api.github.com/repos/lostdesign/linked/releases?per_page=100',
+        headers: {
+          Authorization: 'Bearer ' + process.env.GITHUB_TOKEN
+        }
       })
+        .then(res => {
+          return res.data.map(download=> {
+            return '/download/' + download.name
+          })
+        }
+      )
     }
   },
 
@@ -94,7 +113,6 @@ export default {
   components: true,
 
   buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
     '@nuxtjs/device',
@@ -110,7 +128,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxt/content',
     '@nuxtjs/i18n',
-    // '@nuxt/image',
+    '@nuxtjs/feed',
     '@lostdesign/nuxt-fathom'
   ],
 
@@ -133,7 +151,6 @@ export default {
   },
 
   content: {},
-
   build: {},
 
   sitemap: {
@@ -153,6 +170,51 @@ export default {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',  // recommended
+    }
+  },
+
+  feed: [
+    // data: [ feedType, source, language, title, description ];
+    {
+      path: '/articles-en.xml',
+      type: 'rss2',
+      create,
+      cacheTime: 1000 * 60 * 15,
+      data: ['xml', 'articles', 'en', 'linkeds articles', 'Everything about the development and news of linked.']
+    },
+    {
+      path: '/articles-de.xml',
+      type: 'rss2',
+      create,
+      cacheTime: 1000 * 60 * 15,
+      data: ['xml', 'articles', 'de', 'linkeds Artikel', 'Alles über die Entwicklung und Neuigkeiten von linked.']
+    },
+    {
+      path: '/articles-en.json',
+      type: 'json1',
+      create,
+      cacheTime: 1000 * 60 * 15,
+      data: ['json', 'articles', 'en', 'linkeds articles', 'Everything about the development and news of linked.']
+    },
+    {
+      path: '/articles-en.json',
+      type: 'json1',
+      create,
+      cacheTime: 1000 * 60 * 15,
+      data: ['json', 'articles', 'de', 'linkeds Artikel', 'Alles über die Entwicklung und Neuigkeiten von linked.']
+    }
+  ],
+
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { time, words, minutes } = require('reading-time')(document.text)
+
+        document.readingTime = time
+        document.readingWords = words
+        document.readingMinutes = minutes
+        document.bodyPlainText = document.text
+      }
     }
   }
 }

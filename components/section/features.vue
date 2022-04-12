@@ -138,15 +138,15 @@ export default {
         "detail": "Die Oberfläche wurde in 11 Sprachen übersetzt, und weitere werden folgen."
       },
       "design": {
-        "title": "Minimalistisches design",
-        "detail": "Das minimale Design hilft Dir, sich auf das wesentliche zu konzentrieren, während anderen Funktionen nur dann zur Verfügung stehen, wenn Du sie brauchst."
+        "title": "Minimalistisches Design",
+        "detail": "Das minimalistische Design hilft Dir, sich auf das wesentliche zu konzentrieren, während anderen Funktionen nur dann zur Verfügung stehen, wenn Du sie brauchst."
       },
       "search": {
         "title": "Durchsuche alles",
         "detail": "Nutze die Volltextsuche, um blitzschnell zu finden, was einmal aufgeschrieben wurde. Nichts geht verloren."
       },
       "community": {
-        "title": "Community gesteuert",
+        "title": "Community Driven",
         "detail": "Gestalte gemeinsam die Zukunft von linked als Gemeinschaft - denn linked ist für dich."
       }
     }

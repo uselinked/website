@@ -47,7 +47,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          value: 'https://uselinked.com'
+          content: 'https://uselinked.com'
         },
         {
           hid: 'og:type',

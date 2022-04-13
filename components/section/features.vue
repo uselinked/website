@@ -115,39 +115,39 @@ export default {
     "title": "Schlicht und Stark",
     "subline": "Die Funktionen, die Du brauchst, in einer benutzerfreundlichen Oberfläche. Daily Journaling in gut.",
     "much_more": "Und vieles mehr...",
-    "improving": "Wir arbeiten hart daran, linked noch besser zu machen. Wenn es also eine Funktion gibt, die Du gerne in der App sehen würdest, würden wir uns freuen, davon zu hören.",
+    "improving": "Wir arbeiten hart daran, linked noch besser zu machen. Wenn dir ein Feature in der App fehlt, schreib uns. Wir freuen uns von dir zu hören!",
     "feature": {
       "editor": {
         "title": "Der Editor den du brauchst",
-        "detail": "Vollständige Kontrolle über das Erscheinungsbild deiner Notizen, mit Extras wie Listen, ToDos, Text Formatierung und mehr."
+        "detail": "Vollständige Kontrolle über das Erscheinungsbild deiner Notizen, mit Extras wie Listen, ToDos, Text-Formatierung und mehr."
       },
       "themes": {
-        "title": "Benutzerdefinierte Designs",
-        "detail": "Dunkel oder Hell? Wechsel einfach zwischen den Design Modis."
+        "title": "Darkmode",
+        "detail": "Schön anzusehen, bei Tag und bei Nacht: Mit einem Klick kannst du die Helligkeit der App an deine Umgebung anpassen."
       },
       "keyboard": {
         "title": "Tastenkürzel",
-        "detail": "Vollständige Tastatursteuerung für die Navigation durch die App. Maximale Effizienz."
+        "detail": "Steuere die App über deine Tastatur mit einfachen Shortcuts und sei maximal effizient."
       },
       "offline": {
-        "title": "Offline zuerst und völlig privat",
-        "detail": "Es ist keine Internetverbindung erforderlich - Deine Daten werden lokal gespeichert."
+        "title": "Maximale Privatsphäre",
+        "detail": "Wir nehmen Datenschutz ernst: Linked speichert all deine Notizen bei dir lokal auf dem Computer. Es wird nichts ins Internet übertragen."
       },
       "language": {
         "title": "Wir sprechen deine Sprache",
-        "detail": "Die Oberfläche wurde in 11 Sprachen übersetzt, und weitere werden folgen."
+        "detail": "Die Oberfläche ist multilingual und aktuell in elf Sprachen verfügbar. Weitere folgen."
       },
       "design": {
         "title": "Minimalistisches Design",
-        "detail": "Das minimalistische Design hilft Dir, sich auf das wesentliche zu konzentrieren, während anderen Funktionen nur dann zur Verfügung stehen, wenn Du sie brauchst."
+        "detail": "Dank der reduzierten Benutzeroberfläche kannst du dich auf das Wesentliche konzentrieren. Menüs und Funktionen blenden sich kontextsensitiv nur dann ein, wenn Du sie brauchst."
       },
       "search": {
-        "title": "Durchsuche alles",
-        "detail": "Nutze die Volltextsuche, um blitzschnell zu finden, was einmal aufgeschrieben wurde. Nichts geht verloren."
+        "title": "Volltextsuche",
+        "detail": "Mit der integrierten Suche findest du all deine Notizen blitzschnell wieder. Nichts geht verloren."
       },
       "community": {
-        "title": "Community Driven",
-        "detail": "Gestalte gemeinsam die Zukunft von linked als Gemeinschaft - denn linked ist für dich."
+        "title": "Community driven",
+        "detail": "Linked ist für alle da und lebt von dem Mitwirken der Community. Wir freuen uns, wenn du dich mit deinen Ideen, Wünschen und Feedback einbringst."
       }
     }
   }

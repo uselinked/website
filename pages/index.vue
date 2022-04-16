@@ -85,6 +85,11 @@ export default {
           content: 'Preview image of linked.'
         },
         {
+          hid: 'twitter:card',
+          property: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
           hid: 'twitter:image',
           property: 'twitter:image',
           content: 'https://uselinked.com/images/logo.png',

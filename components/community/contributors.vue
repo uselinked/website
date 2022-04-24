@@ -96,7 +96,9 @@
                 <div class="text-center font-medium lg:text-sm">
                   <h3 class="text-base font-bold">{{ contributor.login }}</h3>
                   <p class="text-xs text-linked">
-                    {{ contributor.contributions }} commits
+                    {{ contributor.contributions }} commit{{
+                      contributor.contributions === 1 ? "" : "s"
+                    }}
                   </p>
                 </div>
               </div>

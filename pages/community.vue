@@ -13,11 +13,14 @@ export default {
     let error = null
 
     try {
-      const response = await fetch('https://api.github.com/repos/lostdesign/linked/contributors', {
-        headers: {
-          Authorization: 'Bearer ' + githubToken
-        }
-      })
+      const response = await fetch(
+        'https://api.github.com/repos/lostdesign/linked/contributors',
+        githubToken
+          ? { headers: { Authorization: `Bearer ${githubToken}` } }
+          : {}
+      )
+      console.log(response)
+
       const isRateLimited = checkRateLimit(response)
 
       if (isRateLimited.error) {

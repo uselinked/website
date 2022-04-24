@@ -13,7 +13,7 @@
       <a
         href="https://discord.gg/uNjJzZvccr"
         class="text-lg w-full flex items-center justify-center px-5 py-3 border border-transparent shadow font-medium rounded-md text-white bg-linked-500 hover:bg-linked-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-linked-700 focus:ring-white mt-6 lg:mt-0 sm:flex-shrink-0"
-        @click.native="trackClick('M6KCBDQG', 0)"
+        @click="trackClick('M6KCBDQG', 0)"
       >
         <icon-discord class="w-6 h-6 mr-4"/>
         {{ $t('say_hello') }}
@@ -30,7 +30,7 @@ export default {
   methods: {
     trackClick(goal) {
       if (process.client) {
-        this.$fathom.trackGoal(goal, 0)
+        this.$fathom?.trackGoal(goal, 0)
       }
     }
   }

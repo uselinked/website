@@ -17,6 +17,7 @@ export default {
     try {
       const { isRateLimited, contributors } =
         await getContributorsOfAllLinkedRepos(githubToken);
+        
       if (isRateLimited.error) {
         error = isRateLimited;
         throw new Error(isRateLimited.message);

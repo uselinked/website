@@ -10,7 +10,7 @@
         </div>
         <a
           target="_blank"
-          :href="getMaintainer[0].html_url"
+          :href="getMaintainer.html_url"
           ref="norel noopener"
           class="
             inline-flex
@@ -32,14 +32,14 @@
               rounded-full
               lg:w-24 lg:h-24
             "
-            :src="getMaintainer[0].avatar_url"
-            :alt="`${getMaintainer[0].login} profile image`"
+            :src="getMaintainer.avatar_url"
+            :alt="`${getMaintainer.login} profile image`"
           />
           <div class="space-y-4">
             <div class="text-center font-medium lg:text-sm">
-              <h3 class="text-base font-bold">{{ getMaintainer[0].login }}</h3>
+              <h3 class="text-base font-bold">{{ getMaintainer.login }}</h3>
               <p class="text-xs text-linked">
-                {{ getMaintainer[0].contributions }} commits
+                {{ getMaintainer.contributions }} commits
               </p>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default {
     getMaintainer() {
       return this.$props.contributors.filter(
         (contributor) => contributor.login === "lostdesign"
-      );
+      )[0];
     },
   },
 };

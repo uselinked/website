@@ -6,38 +6,32 @@
 </template>
 
 <script>
-import {checkRateLimit} from '@/lib/github'
+import { getContributorsOfAllLinkedRepos } from "@/lib/github";
+
+
 
 export default {
-  async asyncData({ $config: { githubToken }}) {
-    let error = null
+  async asyncData({ $config: { githubToken } }) {
+    let error = null;
 
     try {
-      const response = await fetch(
-        'https://api.github.com/repos/lostdesign/linked/contributors',
-        githubToken
-          ? { headers: { Authorization: `Bearer ${githubToken}` } }
-          : {}
-      )
-      console.log(response)
-
-      const isRateLimited = checkRateLimit(response)
-
+      const { isRateLimited, contributors } =
+        await getContributorsOfAllLinkedRepos(githubToken);
+        
       if (isRateLimited.error) {
-        error = isRateLimited
-        throw new Error(isRateLimited.message)
+        error = isRateLimited;
+        throw new Error(isRateLimited.message);
       }
-
       return {
-        contributors: await response.json(),
-        error: null
-      }
+        contributors,
+        error: null,
+      };
     } catch (e) {
       return {
         contributors: null,
         error,
-      }
+      };
     }
-  }
-}
+  },
+};
 </script>

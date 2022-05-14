@@ -2,7 +2,7 @@
   <section aria-labelledby="faq-heading" class="bg-white">
     <content-wrapper>
       <h2 class="text-3xl font-extrabold text-gray-900">{{ $t('title') }}</h2>
-      <i18n path="description" tag="h2" class="mt-5 text-xl text-gray-500">
+      <i18n path="description" tag="h2" class="mt-5 text-xl text-gray-500" v-slot:link>
         <a :href="$t('mailto')" class="external-link font-medium text-linked-700 hover:text-linked-500">{{ $t('email') }}</a>
       </i18n>
       <dl class="mt-12 space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-3">
@@ -45,7 +45,7 @@ export default {
   },
   "de": {
     "title": "FAQ",
-    "description": "Fragen. Häufig gestellte Fragen. Und unsere Antworten. So funktionieren die FAQs. Wenn Du nicht finden konntest, wonach Du gesucht hast, kannst Du deine Anfrage jederzeit {0} an mich senden.",
+    "description": "Fragen. Häufig gestellte Fragen. Und unsere Antworten. So funktionieren die FAQs. Wenn Du nicht finden konntest, wonach Du gesucht hast, kannst Du deine Anfrage jederzeit {link} an mich senden.",
     "email": "per E-Mail",
     "mailto": "mailto:support@uselinked.com?subject=Frage bzgl. linked&body=Liebes linked Team, könnt ihr mir folgende Frage beantworten....",
     "questions": {

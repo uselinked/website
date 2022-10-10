@@ -29,28 +29,6 @@ Die Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.
 
 GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle weltweiten Aktivitäten, bei denen GitHub personenbezogene Daten von natürlichen Personen in der EU verarbeitet. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie unter: [GitHub Data Protection Addendum](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors).
 
-## Cloudflare
-Wir nutzen das Content Delivery Network (CDN) von
-
-Cloudflare Germany GmbH\
-Rosental 7\
-c/o Mindspace\
-80331 München Deutschland (Cloudflare)
-
-um die Sicherheit und die Auslieferungsgeschwindigkeit unserer Website zu erhöhen. Dies entspricht unserem berechtigten Interesse (Art. 6 Abs. 1 lit. f DSGVO). Ein CDN ist ein Netzwerk aus [weltweit] verteilten Servern, das in der Lage ist, optimiert Inhalte an den Websitenutzer auszuliefern. Für diesen Zweck können personenbezogene Daten in Server-Logfiles von Cloudflare verarbeitet werden. Bitte vergleichen Sie die Ausführungen unter „Hosting“.
-
-Cloudflare ist Empfänger Ihrer personenbezogenen Daten und als Auftragsverarbeiter für uns tätig. Die entspricht unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO, selbst kein Content Delivery Network zu betreiben.
-
-Sie haben das Recht der Verarbeitung zu widersprechen. Ob der Widerspruch erfolgreich ist, ist im Rahmen einer Interessenabwägung zu ermitteln.
-
-Die Verarbeitung der unter diesem Abschnitt angegebenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Die Funktionsfähigkeit der Website ist ohne die Verarbeitung nicht gewährleistet.
-
-Ihre personenbezogenen Daten werden von Cloudflare so lange gespeichert, wie es für die beschriebenen Zwecke erforderlich ist.
-
-Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber Cloudflare finden Sie unter: [Cloudflare DPA](https://www.cloudflare.com/de-de/cloudflare-customer-dpa/)
-
-Cloudflare hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle weltweiten Aktivitäten, bei denen Cloudflare personenbezogene Daten von natürlichen Personen in der EU verarbeitet. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie unter: [Cloudflare Anhang zur Datenverarbeitung: Standardvertragsklauseln für Kunden](https://www.cloudflare.com/cloudflare_customer_SCCs-German.pdf)
-
 ## Fathom
 
 Wir möchten so wenig personenbezogene Daten wie möglich verarbeiten, wenn Sie unsere Website nutzen. Aus diesem Grund haben wir uns für Fathom Analytics entschieden, das keine Cookies verwendet und mit der GDPR, ePrivacy (einschließlich PECR), COPPA und CCPA konform ist. Bei der Verwendung dieser datenschutzfreundlichen Website-Analysesoftware wird Ihre IP-Adresse nur kurzzeitig verarbeitet, und wir (als Betreiber dieser Website) haben keine Möglichkeit, Sie zu identifizieren. Gemäß dem CCPA werden Ihre personenbezogenen Daten anonymisiert. Weitere Informationen dazu finden Sie auf der Website von Fathom Analytics.

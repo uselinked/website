@@ -5,8 +5,9 @@ title: Impressum
 ## Angaben gemäß § 5 TMG
 
 André Weller\
-Kugelbergstraße 8\
-84104 Rudelzhausen
+c/o autorenglück.de\
+Franz-Mehring-Str. 15\
+01237 Dresden
 
 **Kontakt**\
 +49 8752 2470578\
@@ -17,9 +18,7 @@ DE311264261
 
 
 **Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV**\
-André Weller\
-Kugelbergstraße 8\
-84104 Rudelzhausen
+André Weller
 
 ## Haftungsausschluss
 
